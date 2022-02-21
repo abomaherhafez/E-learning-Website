@@ -5,17 +5,22 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abomaherhafez/E-learning-Website.git"
+    "url": "git+https://github.com/NeirouzJbira/E-learning-Website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abomaherhafez/E-learning-Website/issues"
+    "url": "https://github.com/NeirouzJbira/E-learning-Website/issues"
   },
-  "homepage": "https://github.com/abomaherhafez/E-learning-Website#readme"
+  "homepage": "https://github.com/NeirouzJbira/E-learning-Website#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2"
+  }
 }
