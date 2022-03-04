@@ -1,7 +1,9 @@
 .green {
   background: green;
 }
-
+.ss {
+  width: 100%;
+}
 .form-control:focus {
   box-shadow: none;
   border-color: #ba68c8;
