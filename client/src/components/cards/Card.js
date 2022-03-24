@@ -41,7 +41,9 @@ export default function Card() {
             </MDBCardText>
             <MDBBtn>
               <Link to="/HomeStudent">
-                <text className="pp">Button</text>
+                <p style={{ margin: "0px" }} className="pp">
+                  Button
+                </p>
               </Link>
             </MDBBtn>
           </MDBCardBody>

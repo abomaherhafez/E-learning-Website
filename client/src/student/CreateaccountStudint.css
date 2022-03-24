@@ -1,8 +1,14 @@
-.green {
+/* .green {
   background: green;
-}
+}*/
 .ss {
   width: 100%;
+  overflow-x: hidden;
+}
+
+.rowHfidh {
+  display: flex;
+  gap: 5px;
 }
 .form-control:focus {
   box-shadow: none;
@@ -43,4 +49,14 @@
   color: #fff;
   cursor: pointer;
   border: solid 1px #ba68c8;
+} /*
+.col-md-{
+  flex: 30%;
+  max-width: 30%;
 }
+.border-right{
+  flex: 30%;
+  max-width: 30%;
+}*/
+/*@media (max-width: 768px) {
+ss}*/

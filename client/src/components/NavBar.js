@@ -37,16 +37,7 @@ function NavBar() {
                     About
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/blog"
-                    activeClassName="active"
-                    className="nav-links"
-                    onClick={handleClick}
-                  >
-                    Blog
-                  </NavLink>
-                </li>
+
                 <li className="nav-item">
                   <NavLink
                     to="/contact"

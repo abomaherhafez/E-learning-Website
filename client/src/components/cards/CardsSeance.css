@@ -1,0 +1,17 @@
+.elKbira-BlKol {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 3%;
+}
+.p-eldurre {
+  font-size: 22px;
+  margin-top: 2%;
+}
+.h1-class {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.el-dec {
+  margin: 2%;
+}

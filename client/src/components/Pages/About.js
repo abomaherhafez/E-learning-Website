@@ -6,7 +6,8 @@ export default function About() {
     <div className="about">
       <Card></Card>
       <Card></Card>
-      <Card></Card> <Card></Card>
+      <Card></Card>
+      <Card></Card>
       <Card></Card>
       <Card></Card>
     </div>

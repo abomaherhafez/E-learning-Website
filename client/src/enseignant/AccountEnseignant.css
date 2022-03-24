@@ -1,0 +1,20 @@
+.hideELZayed {
+  overflow-x: hidden;
+}
+.seance {
+  text-align: center;
+}
+.center-cards {
+  text-align: center;
+  display: block;
+  gap: 20px;
+}
+.icon {
+  width: 100px;
+}
+.ss {
+  background-color: aqua;
+}
+.bigbigicon {
+  font-size: large;
+}
