@@ -2,62 +2,76 @@ import React from "react";
 import "./Signin.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+import NavBar from "../NavBar";
+import Footer from "../footer/Footer";
 
 export default function SignIn() {
-  const [lista, setlista] = useState([
-    { Email: "mohammad@lll.com", pass: "123456" },
-  ]);
+  const [lista, setlista] = useState({
+    Email: "mohammad@lll.com",
+    pass: "123456",
+  });
   const handle = () => console.log(lista);
   const submithandelr = (event) => {
     event.preventDefault();
     console.log(lista);
-    /* axios
-      .post("https://ellien el bdi yah", lista)
-      .then((response) => {
-        Console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });*/
+    /* const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("/auth/login", {
+        username: lista.email,
+        password: lista.pass,
+      });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE" });
+    }
+  };*/
   };
 
   return (
-    <div className="login-form">
-      <form
-        onSubmit={(event) => {
-          submithandelr(event);
-        }}
-      >
-        <h1>Login</h1>
-        <div className="content">
-          <div className="input-field">
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={(e) => setlista({ ...lista, Email: e.target.value })}
-            />
+    <div>
+      <div className="login-form">
+        <NavBar />
+        <form
+          onSubmit={(event) => {
+            submithandelr(event);
+          }}
+        >
+          <h1>Login</h1>
+          <div className="content">
+            <div className="input-field">
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => setlista({ ...lista, Email: e.target.value })}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setlista({ ...lista, pass: e.target.value })}
+              />
+            </div>
           </div>
-          <div className="input-field">
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setlista({ ...lista, pass: e.target.value })}
-            />
+          <div className="action">
+            <button>
+              <Link to="/Create-account" className="buttont">
+                Register étudiant
+              </Link>
+            </button>
+            <button className="button">
+              <Link to="/Create-account-Enseignant" className="buttont">
+                Register enseignant
+              </Link>
+            </button>
+            <button type="submit">Sign in</button>
           </div>
-          <a href="#" className="link">
-            Forgot Your Password?
-          </a>
-        </div>
-        <div className="action">
-          <button>
-            <Link to="/Create-account">Register étudiant </Link>
-          </button>
-          <button>
-            <Link to="/Create-account-Enseignant">Register enseignant </Link>
-          </button>
-          <button type="submit">Sign in</button>
-        </div>
-      </form>
+        </form>
+      </div>
+      <Footer />
     </div>
   );
 }

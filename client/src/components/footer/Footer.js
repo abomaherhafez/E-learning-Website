@@ -2,8 +2,6 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-  let d = new Date();
-  let n = d.getFullYear();
   return (
     <div className="footer">
       <div className="main_footer">
@@ -37,10 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="logo_copyright">
-        <div className="nav-logo">
-          CodeBucks
-          <i className="fas fa-code"></i>
-        </div>
+        <div className="nav-logo">E-learning</div>
         <div className="copyright"></div>
       </div>
     </div>

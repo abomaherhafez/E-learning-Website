@@ -7,10 +7,10 @@ import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 export default function Sidebar() {
   return (
     <div className="navMenu">
-      <Link className="nodecoration" to="/ss">
+      <Link className="nodecoration" to="/Accountsettings">
         <div className="cenerthisiconqndtext">
           <AccountBoxIcon fontSize="large" className="center-icon" />
-          <p className="nodecoration">account settings</p>
+          <p className="nodecoration">mettre à jour le profil </p>
         </div>
       </Link>
       <Link className="nodecoration" to="/CreateSeance">
@@ -29,7 +29,7 @@ export default function Sidebar() {
         </div>
       </Link>
 
-      <div class="dot"></div>
+      <div className="dot"></div>
     </div>
   );
 }
