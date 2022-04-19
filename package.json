@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/NeirouzJbira/E-learning-Website#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "mongoose": "^6.2.2"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
+    "mongoose-unique-validator": "^3.0.0",
+    "validator": "^13.7.0"
   }
 }
