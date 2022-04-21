@@ -1,30 +1,23 @@
-.sidebarespace{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+.sidebarespace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.tableeladmin{
-   
-   height: 0px;
-    
-   margin-right: 200px;
-    margin-left: 200px  ;  
-}
-.cardqdmindqsh{
-   
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap ;
-    padding-left: 40px;
+.tableeladmin {
+  height: 0px;
 
+  margin-right: 200px;
+  margin-left: 200px;
 }
-.cont-tarki77.bigone{
-    flex: 20%;
-    margin:20px 10px;
-
+.cardqdmindqsh {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 40px;
+}
+.cont-tarki77.bigone {
+  flex: 20%;
+  margin: 20px 10px;
 }
