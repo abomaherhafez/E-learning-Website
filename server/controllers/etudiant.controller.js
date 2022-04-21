@@ -1,35 +1,38 @@
-const User = require("../models/user");
-const bcrypt = require("bcrypt");
+const Etudiant = require('../models/etudiant');
+const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const { secret } = require("../config/jwt");
 
-class UserController {
+
+
+class EtudiantController {
+
   register(req, res) {
-    const user = new User(req.body);
-    user
+    const etudiant = new Etudiant(req.body);
+    etudiant
       .save()
       .then(() => {
         res
-          .cookie("usertoken", jwt.sign({ _id: user._id }, secret), {
+          .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
             httpOnly: true,
           })
-          .json({ msg: "success", user: user });
+          .json({ msg: "success", etudiant: etudiant });
       })
       .catch((err) => res.json(err));
   }
 
   login(req, res) {
-    User.findOne({ email: req.body.email })
-      .then((user) => {
-        if (user == null) {
+    Etudiant.findOne({ email: req.body.email })
+      .then((etudiant) => {
+        if (etudiant == null) {
           res.json({ msg: "Invalid login attempt" }); //email is not found
         } else {
           bcrypt
-            .compare(req.body.password, user.password)
+            .compare(req.body.password, etudiant.password)
             .then((passwordIsValid) => {
               if (passwordIsValid) {
                 res
-                  .cookie("usertoken", jwt.sign({ _id: user._id }, secret), {
+                  .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
                     httpOnly: true,
                   })
                   .json({ msg: "success!" });
@@ -45,8 +48,8 @@ class UserController {
 
   getLoggedInUser(req, res) {
     const decodedJWT = jwt.decode(req.cookies.usertoken, { complete: true });
-    User.findById(decodedJWT.payload._id)
-      .then((user) => res.json(user))
+    Etudiant.findById(decodedJWT.payload._id)
+      .then((etudiant) => res.json(etudiant))
       .catch((err) => res.json(err));
   }
 
@@ -54,6 +57,12 @@ class UserController {
     res.clearCookie("usertoken");
     res.sendStatus(200);
   }
+  getEtudiant(req, res ){
+    Etudiant.findOne({_id:req.params.id})
+    .then(etudiant => res.status(201).json(etudiant))
+    .catch(error => res.status(400).json({error}));
+  }
+
 }
 
-module.exports = new UserController();
+module.exports = new EtudiantController();
