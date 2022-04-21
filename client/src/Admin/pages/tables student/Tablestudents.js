@@ -1,30 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import "../seances/tableseanczes.css";
-import axios from "axios";
-export default function TableEnseignant() {
-  useEffect(() => {
-    async function getResults() {
-      const results = await axios.Post(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      setEnseignant(results.data);
-    }
-    getResults();
-  }, []);
-  /*  useEffect(() => {
-    axios
-      .post('http://localhost:3001/create', refus)
-      .then(() => console.log('Book Created'))
-      .catch(err => {
-        console.error(err);
-      });
-  };
-    
-  },[])*/
-  const styleemail = { paddingLeft: "180px" };
-  const [Enseignant, setEnseignant] = useState([
+
+export default function Tablestudents() {
+  const stylethEmail = { paddingLeft: " 140px" };
+  const [student, setstudent] = useState([
     {
       id: 1,
       name: "ahmed",
@@ -61,10 +41,7 @@ export default function TableEnseignant() {
       spécialité: "n7ebk mot",
     },
   ]);
-  const [refus, setrefus] = useState({});
-  const style = { marginLeft: "15px" };
-
-  const ahmed = Enseignant;
+  const ahmed = student;
   return (
     <div>
       <div>
@@ -73,8 +50,8 @@ export default function TableEnseignant() {
             <tr className="trforthed">
               <th>nom </th>
               <th>prenom</th>
-              <th style={styleemail}>Email</th>
-              <th>spécialité</th>
+              <th style={stylethEmail}>Email</th>
+              <th>niveau</th>
               <th>action</th>
             </tr>
           </thead>
@@ -88,27 +65,16 @@ export default function TableEnseignant() {
 
                 <td className="tdtrTbodypadding">
                   <button
+                    style={{ "margin-left": "50px" }}
+                    className="divbutt"
                     onClick={() => {
                       const ahme = ahmed.filter(
                         (element) => element.id !== e.id
                       );
-                      setEnseignant(ahme);
-                      setrefus(e);
-                      console.log(refus);
+                      setstudent(ahme);
                     }}
                   >
-                    Refus
-                  </button>
-                  <button
-                    style={style}
-                    onClick={() => {
-                      const ahme = ahmed.filter(
-                        (element) => element.id !== e.id
-                      );
-                      setEnseignant(ahme);
-                    }}
-                  >
-                    Acceptation
+                    supprimer
                   </button>
                 </td>
               </tr>

@@ -8,26 +8,26 @@ import Footer from "../footer/Footer";
 
 export default function SignIn() {
   const [lista, setlista] = useState({
-    Email: "mohammad@lll.com",
-    pass: "123456",
+    Email: "",
+    pass: "",
   });
-  const handle = () => console.log(lista);
+  const [login, setlogin] = useState({});
   const submithandelr = (event) => {
     event.preventDefault();
     console.log(lista);
-    /* const handleSubmit = async (e) => {
-    e.preventDefault();
-    dispatch({ type: "LOGIN_START" });
-    try {
-      const res = await axios.post("/auth/login", {
-        username: lista.email,
+  };
+  const handlelogin = async () => {
+    await axios
+      .get("http://localhost:4000/auth/protected", {
+        Email: lista.Email,
         password: lista.pass,
+      })
+      .then((res) => {
+        setlogin(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-    } catch (err) {
-      dispatch({ type: "LOGIN_FAILURE" });
-    }
-  };*/
   };
 
   return (
@@ -67,7 +67,9 @@ export default function SignIn() {
                 Register enseignant
               </Link>
             </button>
-            <button type="submit">Sign in</button>
+            <button type="submit" onClick={handlelogin}>
+              Sign in
+            </button>
           </div>
         </form>
       </div>

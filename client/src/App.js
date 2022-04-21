@@ -17,12 +17,12 @@ import SeanceEnsginent from "./enseignant/SeanceEnsginent";
 import Seancestudentbeforaccept from "./student/Seancestudentbeforaccept";
 import Seancesyudentafteraceept from "./student/Seancesyudentafteraceept";
 import Updqteseqnce from "./enseignant/Updqteseqnce";
-import Test from "./components/test/Test";
 import Profileadmin from "./Admin/Profileadmin";
 import Users from "./Admin/pages/Users/Users";
 import Seances from "./Admin/pages/seances/Seances";
 import TT from "./Admin/tqble7adher/TT";
 import Pageenseignant from "./Admin/pages/tables enseignant/Pageenseignant";
+import Studentsdachboard from "./Admin/pages/tables student/Studentsdachboard";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -97,6 +97,9 @@ function App() {
                 </Route>
                 <Route path="/enseignant">
                   <Pageenseignant />
+                </Route>
+                <Route path="/studnts">
+                  <Studentsdachboard />
                 </Route>
               </Switch>
             </div>

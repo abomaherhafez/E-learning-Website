@@ -4,6 +4,7 @@ import "../seances/tableseanczes.css";
 
 export default function TableEnseginantelmajoud() {
   const stylethEmail = { paddingLeft: " 140px" };
+
   const [Enseignant, setEnseignant] = useState([
     {
       id: 1,
@@ -65,6 +66,7 @@ export default function TableEnseginantelmajoud() {
 
                 <td className="tdtrTbodypadding">
                   <button
+                    style={{ "margin-left": "50px" }}
                     className="divbutt"
                     onClick={() => {
                       const ahme = ahmed.filter(
