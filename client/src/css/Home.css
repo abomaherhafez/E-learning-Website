@@ -1,9 +1,16 @@
-.image {
-  padding-top: 5em;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+.classHome {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+  padding: 3%;
+
 }
-.css {
-  color: black;
-}
+.classh2{
+  text-align: center;
+  margin: 30px;
+  color: #198754;
+  text-shadow: 2px 2px 4px #000000;}
+ 

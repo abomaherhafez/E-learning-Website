@@ -13,8 +13,7 @@ function NavBar() {
           <nav className="navbar">
             <div className="nav-container">
               <NavLink to="/" className="nav-logo">
-                CodeBucks
-                <i className="fas fa-code"></i>
+                E-learaning
               </NavLink>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
@@ -37,16 +36,7 @@ function NavBar() {
                     About
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/blog"
-                    activeClassName="active"
-                    className="nav-links"
-                    onClick={handleClick}
-                  >
-                    Blog
-                  </NavLink>
-                </li>
+
                 <li className="nav-item">
                   <NavLink
                     to="/contact"

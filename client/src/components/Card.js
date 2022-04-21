@@ -1,4 +1,3 @@
-import "./Cards.css";
 import React from "react";
 import {
   MDBCard,
@@ -41,7 +40,9 @@ export default function Card() {
             </MDBCardText>
             <MDBBtn>
               <Link to="/HomeStudent">
-                <text className="pp">Button</text>
+                <p style={{ margin: "0px" }} className="pp">
+                  Button big one
+                </p>
               </Link>
             </MDBBtn>
           </MDBCardBody>
