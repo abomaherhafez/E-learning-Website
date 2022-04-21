@@ -1,12 +1,5 @@
 const Seance = require("../models/seance");
 
-
-
-
-
-
-
-
 exports.creatSeance = (req, res) =>{
     const seance = new Seance(req.body);
     seance.save()
