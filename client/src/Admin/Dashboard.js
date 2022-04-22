@@ -5,7 +5,7 @@ import "./Dashboraed.css";
 import Cardadmin2 from "../Admin/Cards/Cardadmin2";
 import Cardadmin3 from "../Admin/Cards/Cardadmin3";
 import Cardadmin4 from "../Admin/Cards/Cardadmin4";
-import TableAdmin from "./Table/TableAdmin";
+import TEstt from "../test/TEstt";
 export default function Dashboard() {
   return (
     <div>
@@ -19,7 +19,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="tableeladmin">
-        <TableAdmin />
+        <TEstt />
       </div>
     </div>
   );

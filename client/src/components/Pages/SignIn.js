@@ -57,6 +57,10 @@ export default function SignIn() {
             </div>
           </div>
           <div className="action">
+            <button type="submit" onClick={handlelogin}>
+              Sign in
+            </button>
+            <br />
             <button>
               <Link to="/Create-account" className="buttont">
                 Register étudiant
@@ -66,9 +70,6 @@ export default function SignIn() {
               <Link to="/Create-account-Enseignant" className="buttont">
                 Register enseignant
               </Link>
-            </button>
-            <button type="submit" onClick={handlelogin}>
-              Sign in
             </button>
           </div>
         </form>

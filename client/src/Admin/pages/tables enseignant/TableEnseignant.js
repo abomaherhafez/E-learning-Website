@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import "../seances/tableseanczes.css";
 import axios from "axios";
 export default function TableEnseignant() {
-  useEffect(() => {
+  /* useEffect(() => {
     async function getResults() {
       const results = await axios.Post(
         "https://jsonplaceholder.typicode.com/posts"
@@ -12,7 +12,7 @@ export default function TableEnseignant() {
       setEnseignant(results.data);
     }
     getResults();
-  }, []);
+  }, []);*/
   /*  useEffect(() => {
     axios
       .post('http://localhost:3001/create', refus)
