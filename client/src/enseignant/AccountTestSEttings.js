@@ -2,15 +2,14 @@ import React from "react";
 import { useState } from "react";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
-import "../enseignant/acouttest.css";
-
-export default function StudentAccountsetttings() {
+import "./acouttest.css";
+export default function AccountTestSEttings() {
   const [name, setName] = useState({
     lastname: "",
     firstname: "",
     phone: "",
     password: "",
-    niveau: "",
+    spécialité: "",
     DateOfBirth: "",
     email: "",
   });
@@ -88,14 +87,14 @@ export default function StudentAccountsetttings() {
 
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div className="form-group">
-                      <label>niveau</label>
+                      <label>spécialité</label>
                       <input
                         onChange={(e) =>
-                          setName({ ...name, niveau: e.target.value })
+                          setName({ ...name, spécialité: e.target.value })
                         }
                         type="text"
                         className="form-control"
-                        placeholder="Entrez votre niveau "
+                        placeholder="Entrez votre spécialité "
                       />
                     </div>
                   </div>

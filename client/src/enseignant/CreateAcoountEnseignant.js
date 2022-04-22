@@ -17,9 +17,9 @@ export default function CreateAcoountEnseignant() {
 
   return (
     <div>
-      <div className="ss">
+      <div>
         <NavBar />
-        <div className="scc">
+        <div style={{ marginLeft: "15%" }} className="scc">
           <div className="green">
             <div className="rowHfidh">
               <div className="col-md-3 border-right">
@@ -142,7 +142,6 @@ export default function CreateAcoountEnseignant() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4"></div>
             </div>
           </div>
         </div>

@@ -23,6 +23,10 @@ import Seances from "./Admin/pages/seances/Seances";
 import TT from "./Admin/tqble7adher/TT";
 import Pageenseignant from "./Admin/pages/tables enseignant/Pageenseignant";
 import Studentsdachboard from "./Admin/pages/tables student/Studentsdachboard";
+import TesT from "./TesT";
+import TEstt from "./test/TEstt";
+import AccountTestSEttings from "./enseignant/AccountTestSEttings";
+import StudentAccountsetttings from "./student/StudentAccountsetttings";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -100,6 +104,18 @@ function App() {
                 </Route>
                 <Route path="/studnts">
                   <Studentsdachboard />
+                </Route>
+                <Route path="/TESTTTTT">
+                  <TesT />
+                </Route>
+                <Route path="/tsetttt">
+                  <TEstt />
+                </Route>
+                <Route path="/Account-etudent-settings">
+                  <StudentAccountsetttings />
+                </Route>
+                <Route path="/TESTT">
+                  <AccountTestSEttings />
                 </Route>
               </Switch>
             </div>
