@@ -1,7 +1,7 @@
-.prfiadminclass{
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: center;
-    align-items: center;
+.prfiadminclass {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }

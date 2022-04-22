@@ -1,12 +1,9 @@
-const Enseingnant = require('../models/enseignant');
+const Enseingnant = require("../models/enseignant");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { secret } = require("../config/jwt");
 
-
-
 class EnseignantController {
-
   register(req, res) {
     const enseignant = new Enseingnant(req.body);
     enseignant
@@ -32,9 +29,13 @@ class EnseignantController {
             .then((passwordIsValid) => {
               if (passwordIsValid) {
                 res
-                  .cookie("usertoken", jwt.sign({ _id: enseignant._id }, secret), {
-                    httpOnly: true,
-                  })
+                  .cookie(
+                    "usertoken",
+                    jwt.sign({ _id: enseignant._id }, secret),
+                    {
+                      httpOnly: true,
+                    }
+                  )
                   .json({ msg: "success!" });
               } else {
                 res.json({ msg: "Invalid login attempt" }); //incorrect password
@@ -57,10 +58,10 @@ class EnseignantController {
     res.clearCookie("usertoken");
     res.sendStatus(200);
   }
-  getEnseignant(req, res ){
-    Enseingnant.findOne({_id:req.params.id})
-    .then(enseignant => res.status(201).json(enseignant))
-    .catch(error => res.status(400).json({error}));
+  getEnseignant(req, res) {
+    Enseingnant.findOne({ _id: req.params.id })
+      .then((enseignant) => res.status(201).json(enseignant))
+      .catch((error) => res.status(400).json({ error }));
   }
 }
 

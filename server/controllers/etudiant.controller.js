@@ -1,12 +1,9 @@
-const Etudiant = require('../models/etudiant');
-const bcrypt = require('bcrypt');
+const Etudiant = require("../models/etudiant");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { secret } = require("../config/jwt");
 
-
-
 class EtudiantController {
-
   register(req, res) {
     const etudiant = new Etudiant(req.body);
     etudiant
@@ -32,9 +29,13 @@ class EtudiantController {
             .then((passwordIsValid) => {
               if (passwordIsValid) {
                 res
-                  .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
-                    httpOnly: true,
-                  })
+                  .cookie(
+                    "usertoken",
+                    jwt.sign({ _id: etudiant._id }, secret),
+                    {
+                      httpOnly: true,
+                    }
+                  )
                   .json({ msg: "success!" });
               } else {
                 res.json({ msg: "Invalid login attempt" }); //incorrect password
@@ -57,12 +58,11 @@ class EtudiantController {
     res.clearCookie("usertoken");
     res.sendStatus(200);
   }
-  getEtudiant(req, res ){
-    Etudiant.findOne({_id:req.params.id})
-    .then(etudiant => res.status(201).json(etudiant))
-    .catch(error => res.status(400).json({error}));
+  getEtudiant(req, res) {
+    Etudiant.findOne({ _id: req.params.id })
+      .then((etudiant) => res.status(201).json(etudiant))
+      .catch((error) => res.status(400).json({ error }));
   }
-
 }
 
 module.exports = new EtudiantController();
