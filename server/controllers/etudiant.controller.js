@@ -13,9 +13,10 @@ class EtudiantController {
           .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
             httpOnly: true,
           })
+          .status(200)
           .json({ msg: "success", etudiant: etudiant });
       })
-      .catch((err) => res.json(err));
+      .catch((err) => res.status(450).json(err));
   }
 
   login(req, res) {
@@ -36,9 +37,11 @@ class EtudiantController {
                       httpOnly: true,
                     }
                   )
+                  .status(200)
+
                   .json({ msg: "success!" });
               } else {
-                res.json({ msg: "Invalid login attempt" }); //incorrect password
+                res.status(450).json({ msg: "Invalid login attempt" }); //incorrect password
               }
             })
             .catch((err) => res.json({ msg: "Invalid login attempt", err }));
