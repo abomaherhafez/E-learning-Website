@@ -13,9 +13,10 @@ class EnseignantController {
           .cookie("usertoken", jwt.sign({ _id: enseignant._id }, secret), {
             httpOnly: true,
           })
+          .status(200)
           .json({ msg: "success", enseignant: enseignant });
       })
-      .catch((err) => res.json(err));
+      .catch((err) => res.status(500).json(err));
   }
 
   login(req, res) {

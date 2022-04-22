@@ -3,8 +3,12 @@ import "./CreateaccountStudint.css";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export default function CreateaccountStudint() {
+  const history = useHistory();
+
   const [name, setName] = useState({
     lastname: "",
     firstname: "",
@@ -14,6 +18,26 @@ export default function CreateaccountStudint() {
     DateOfBirth: "",
     email: "",
   });
+  const handle = () => {
+    axios
+      .post("http://localhost:3500/api/registerEnseignant", {
+        lastName: name.lastname,
+        firstName: name.firstname,
+        phone: name.phone,
+        password: name.password,
+        niveau: name.niveau,
+        DateOfBirth: name.DateOfBirth,
+        email: name.email,
+      })
+      .then((res) => {
+        console.log(res);
+        if (res) {
+          history.push("/sign-in");
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(name);
+  };
 
   return (
     <div>
@@ -65,13 +89,13 @@ export default function CreateaccountStudint() {
                   </div>
                   <div className="mt-3">
                     <div className="col-md-12">
-                      <label className="labels">Mobile Number</label>
+                      <label className="labels">Email </label>
                       <input
-                        type="text"
+                        type="Email"
                         className="form-control"
-                        placeholder="enter phone number"
+                        placeholder="enter email "
                         onChange={(e) =>
-                          setName({ ...name, phone: e.target.value })
+                          setName({ ...name, email: e.target.value })
                         }
                       />
                     </div>
@@ -109,13 +133,13 @@ export default function CreateaccountStudint() {
                       />
                     </div>
                     <div className="col-md-12">
-                      <label className="labels">Email </label>
+                      <label className="labels">Mobile Number</label>
                       <input
-                        type="Email"
+                        type="text"
                         className="form-control"
-                        placeholder="enter email "
+                        placeholder="enter phone number"
                         onChange={(e) =>
-                          setName({ ...name, email: e.target.value })
+                          setName({ ...name, phone: e.target.value })
                         }
                       />
                     </div>
@@ -124,27 +148,13 @@ export default function CreateaccountStudint() {
                     <button
                       className="btn btn-primary profile-button"
                       type="button"
-                      onClick={(event) => {
-                        alert("A form was submitted: " + name);
-
-                        fetch("http://localhost:3000/store-data", {
-                          method: "POST",
-                          // We convert the React state to JSON and send it as the POST body
-                          body: JSON.stringify(name),
-                        }).then(function (response) {
-                          console.log(response);
-                          return response.json();
-                        });
-
-                        event.preventDefault();
-                      }}
+                      onClick={handle}
                     >
                       Save Profile
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4"></div>
             </div>
           </div>
         </div>
