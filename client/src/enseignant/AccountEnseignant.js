@@ -11,7 +11,7 @@ export default function AccountEnseignant() {
     <div>
       <div className="hideELZayed">
         <NavBar />
-        <Sidebar />
+
         <h2 className="seance">votre séances</h2>
         <div className="center-cards">
           <Card1 />
