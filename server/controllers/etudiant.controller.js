@@ -38,6 +38,7 @@ class EtudiantController {
                     }
                   )
                   .status(200)
+
                   .json({ msg: "success!" });
               } else {
                 res.status(450).json({ msg: "Invalid login attempt" }); //incorrect password
