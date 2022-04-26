@@ -72,6 +72,33 @@ export default function AccountTestSEttings() {
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div className="form-group">
+                      <label>Email</label>
+                      <input
+                        onChange={(e) =>
+                          setName({ ...name, email: e.target.value })
+                        }
+                        type="Email"
+                        className="form-control"
+                        placeholder="Entrez votre Email"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div className="form-group">
+                      <label>mot de pass</label>
+                      <input
+                        onChange={(e) =>
+                          setName({ ...name, password: e.target.value })
+                        }
+                        type="password"
+                        className="form-control"
+                        placeholder=" Entrez votre mot de pass"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div className="form-group">
                       <label>Numero de telephone</label>
                       <input
                         onChange={(e) =>
@@ -107,39 +134,13 @@ export default function AccountTestSEttings() {
                         onChange={(e) =>
                           setName({ ...name, DateOfBirth: e.target.value })
                         }
-                        type="date  "
+                        type="Date"
                         className="form-control"
                         id="Street"
-                        placeholder="Entrez votre date de naissance"
                       />
                     </div>
                   </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div className="form-group">
-                      <label>mot de pass</label>
-                      <input
-                        onChange={(e) =>
-                          setName({ ...name, password: e.target.value })
-                        }
-                        type="password"
-                        className="form-control"
-                        placeholder=" Entrez votre mot de pass"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div className="form-group">
-                      <label>Email</label>
-                      <input
-                        onChange={(e) =>
-                          setName({ ...name, email: e.target.value })
-                        }
-                        type="Email"
-                        className="form-control"
-                        placeholder="Entrez votre Email"
-                      />
-                    </div>
-                  </div>
+
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"></div>
                 </div>
                 <div className="row gutters">
