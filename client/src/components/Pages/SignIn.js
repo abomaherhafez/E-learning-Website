@@ -6,9 +6,12 @@ import axios from "axios";
 import NavBar from "../NavBar";
 import Footer from "../footer/Footer";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { Typesignin } from "../../App";
 
 export default function SignIn() {
   const history = useHistory();
+  const [signininformation, setsignininformation] = useContext(Typesignin);
   const [problem, setproblem] = useState();
   const [lista, setlista] = useState({
     Email: "",
@@ -53,7 +56,10 @@ export default function SignIn() {
       console.log(content);
       if (content.msg === "Invalid login attempt") {
       } else {
-        history.push("/admin");
+        setsignininformation("ens");
+        console.log(signininformation);
+        localStorage.setItem("type-inscription", "ens");
+        history.push("/AccountEnseignant");
       }
     })();
     (async () => {
@@ -77,7 +83,10 @@ export default function SignIn() {
       console.log(content);
       if (content.msg === "Invalid login attempt") {
       } else {
-        history.push("/");
+        setsignininformation("et");
+        console.log(signininformation);
+        localStorage.setItem("type-inscription", "et");
+        history.push("/HomeaccountStudent");
       }
     })();
   };
@@ -88,6 +97,8 @@ export default function SignIn() {
         <form
           onSubmit={(event) => {
             submithandelr(event);
+            setsignininformation("hiiiiiiiiiiiiiiiiiii");
+            console.log(signininformation);
           }}
         >
           <h1>Login</h1>
