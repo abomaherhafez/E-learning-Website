@@ -122,7 +122,14 @@ export default function Updqteseqnce() {
         </div>
       </div>
 
-      <div className="butt">
+      <div
+        style={{
+          display: "flex",
+
+          alignContent: "stretch",
+          justifyContent: "center",
+        }}
+      >
         <button onClick={handleclick} className="butt">
           <span className="text">update</span>
         </button>

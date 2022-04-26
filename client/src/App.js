@@ -71,7 +71,7 @@ function App() {
                   if (navprop === "et") {
                     return (
                       <>
-                        //student
+                        {/*student*/}
                         <Route path="/HomeaccountStudent">
                           <HomeaccountStudent />
                         </Route>
@@ -89,7 +89,7 @@ function App() {
                   } else if (navprop == "ens") {
                     return (
                       <>
-                        //ensignt
+                        {/*ensignt*/}
                         <Route exact path="/AccountEnseignant">
                           <AccountEnseignant />
                         </Route>
@@ -102,13 +102,16 @@ function App() {
                         <Route path="/Account-ensingiant-settings">
                           <AccountTestSEttings />
                         </Route>
+                        <Route path="/ee">
+                          <SeanceEnsginent />
+                        </Route>
                       </>
                     );
                   } else if (navprop === "hhhh") {
                     return (
                       <>
-                        {" "}
-                        /admin
+                        {/*admin*/}
+
                         <Route path="/admin">
                           <Dashboard />
                         </Route>

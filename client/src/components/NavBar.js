@@ -69,7 +69,7 @@ function NavBar() {
                       <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
                           <NavLink
-                            to="/Home"
+                            to="/AccountEnseignant"
                             activeClassName="active"
                             className="nav-links"
                             onClick={handleClick}
@@ -80,12 +80,22 @@ function NavBar() {
 
                         <li className="nav-item">
                           <NavLink
-                            to="/Account-etudent-settings"
+                            to="/Account-ensingiant-settings"
                             activeClassName="active"
                             className="nav-links"
                             onClick={handleClick}
                           >
                             Profil
+                          </NavLink>
+                        </li>
+                        <li className="nav-item">
+                          <NavLink
+                            to="/CreateSeance"
+                            activeClassName="active"
+                            className="nav-links"
+                            onClick={handleClick}
+                          >
+                            créer seance
                           </NavLink>
                         </li>
 
