@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../cards/Card";
 import Card1 from "../cards/Card1";
 import Footer from "../footer/Footer";
 import NavBar from "./NavBar";

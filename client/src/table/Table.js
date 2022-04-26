@@ -43,24 +43,24 @@ export default function Table() {
   localStorage.setItem("person", JSON.stringify(students));
   const ahmed = JSON.parse(localStorage.getItem("person"));
   return (
-    <table>
+    <table className="Table">
       <thead>
         <tr>
-          <th>prenom</th>
-          <th>nom</th>
-          <th>Email</th>
-          <th>status</th>
-          <th>action </th>
+          <th className="th thh">prenom</th>
+          <th className="th thh">nom</th>
+          <th className="th thh">Email</th>
+          <th className="th thh">status</th>
+          <th className="th thh">action </th>
         </tr>
       </thead>
       <tbody>
         {students.map((e) => (
           <tr>
-            <td>{e.name}</td>
-            <td>{e.firstname}</td>
-            <td>{e.email}</td>
-            <td>{e.status}</td>
-            <td>
+            <td className="td tdd">{e.name}</td>
+            <td className="td tdd">{e.firstname}</td>
+            <td className="td tdd">{e.email}</td>
+            <td className="td tdd">{e.status}</td>
+            <td className="td tdd">
               <button
                 onClick={() => {
                   ahmed.map((ee) => {

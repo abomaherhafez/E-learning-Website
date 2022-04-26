@@ -26,7 +26,6 @@
     "devextreme-react": "^21.2.6",
     "faker": "^5.5.3",
     "mdb-react-ui-kit": "^2.3.0",
-    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",
     "react-chartjs-2": "^4.1.0",

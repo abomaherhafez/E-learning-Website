@@ -1,24 +1,24 @@
-table {
+.Table {
   border-collapse: collapse;
   width: 100%;
   height: 70%;
 }
-th {
+.th {
   padding: 5%;
   font-size: 150%;
   border: 1px;
   text-align: center;
   margin-left: 40%;
 }
-td {
+.td {
   border: 1px solid #ffff;
   text-align: center;
   padding: 3%;
   font-size: 150%;
 }
-th {
+.thh {
   background-color: rgb(117, 201, 250);
 }
-td {
+.tdd {
   background-color: rgb(205, 235, 253);
 }
