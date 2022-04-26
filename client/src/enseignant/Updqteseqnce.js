@@ -31,6 +31,7 @@ export default function Updqteseqnce() {
             src="https://static.scientificamerican.com/blogs/cache/file/15E43A6F-3941-471A-BF4A81AECDC8C8AA_source.jpg?w=590&h=800&19535223-FF51-4AE3-A05064AFC6E375F5"
             className="imagee"
           />
+          {/**/}
           <div>
             <label>Tilte:</label>
             <br />
