@@ -19,7 +19,6 @@ import Updqteseqnce from "./enseignant/Updqteseqnce";
 import Profileadmin from "./Admin/Profileadmin";
 import Users from "./Admin/pages/Users/Users";
 import Seances from "./Admin/pages/seances/Seances";
-import TT from "./Admin/tqble7adher/TT";
 import Pageenseignant from "./Admin/pages/tables enseignant/Pageenseignant";
 import Studentsdachboard from "./Admin/pages/tables student/Studentsdachboard";
 import AccountTestSEttings from "./enseignant/AccountTestSEttings";
@@ -115,9 +114,7 @@ function App() {
                         <Route path="/admin">
                           <Dashboard />
                         </Route>
-                        <Route path="/test">
-                          <TT />
-                        </Route>
+
                         <Route path="/profile admin">
                           <Profileadmin />
                         </Route>
