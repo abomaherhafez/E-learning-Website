@@ -1,7 +1,14 @@
 const mongoose = require("mongoose");
 const EtudiantSchema = new mongoose.Schema(
     {
-        idE: {type: String},
-        idS: {type: String}
+        SId:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref:"seance"
+        },
+        etId:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref:"tudiant"
+        },
+        statu: {type: String}
     }
 );

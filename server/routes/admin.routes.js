@@ -13,11 +13,6 @@ router.get(
 );
 router.get("/api/logoutAdmin", adminCntrl.logout);
 
-router.get('/etudiant', adminCntrl.getAllEtudiant);
-router.get('/etudiant/:id',adminCntrl.getOneEtudiant);
-router.get('/enseignant/', adminCntrl.getAllenseignant);
-router.get('/enseignant/:id', adminCntrl.getOneEnseignat);
-router.delete('/enseignant/:id', adminCntrl.deleteEnseignant);
-router.delete('/etudiant/:id', adminCntrl.deleteEtudiant);
+
 
 module.exports = router;
