@@ -21,4 +21,27 @@ exports.getAllSeanceAssister = (req, res) => {
 //     .then((seance) => {
 //        if((Seance._id == assisterSeance.idS) && (Etudiant._id == assisterSeance.idE))
 
+    
 // }
+
+exports.statuAssisterSeance = (req, res) => {
+    const test = req.body ;
+    assisterSeance.findByIdAndUpdate({_id: req.params.id}).then(
+      (assisterSeance => {if (test){
+        assisterSeance.statu = "accept";
+        res.json(assisterSeance);
+      }
+      else {
+        assisterSeance.statu = " non accept";
+        res.json(assisterSeance);
+      }} )
+    ).catch((err => res.json(err)));
+    
+  }
+exports.getSeanceAssister = (req, res) =>{
+    assisterSeance
+}
+
+
+// }
+
