@@ -7,7 +7,7 @@ export default function Contact() {
     <div>
       <NavBar />
       <div className="contact-clean">
-        <form onsubmit="return false;">
+        <form onSubmit="return false;">
           <h2 className="text-center">Contact us</h2>
           <div className="form-group">
             <input

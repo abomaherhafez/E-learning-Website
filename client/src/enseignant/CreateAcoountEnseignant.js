@@ -3,8 +3,11 @@ import "../student/CreateaccountStudint.css";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export default function CreateAcoountEnseignant() {
+  const history = useHistory();
   const [name, setName] = useState({
     lastname: "",
     firstname: "",
@@ -14,12 +17,62 @@ export default function CreateAcoountEnseignant() {
     DateOfBirth: "",
     email: "",
   });
+  const handle = () => {
+    /*(async () => {
+      const rawResponse = await fetch(
+        "http://localhost:3500/api/registerEnseignant",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            lastName: name.lastname,
+            firstName: name.firstname,
+            phone: name.phone,
+            password: name.password,
+            spécialité: name.spécialité,
+            DateOfBirth: name.DateOfBirth,
+            email: name.email,
+          }),
 
+        }
+
+      );
+      if(rawResponse){
+        history
+      }
+
+      const content = await rawResponse.json();
+
+      console.log(content);
+
+    })();*/
+    axios
+      .post("http://localhost:3500/api/registerEnseignant", {
+        lastName: name.lastname,
+        firstName: name.firstname,
+        phone: name.phone,
+        password: name.password,
+        spécialité: name.spécialité,
+        DateOfBirth: name.DateOfBirth,
+        email: name.email,
+      })
+      .then((res) => {
+        console.log(res);
+        if (res) {
+          history.push("/sign-in");
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(name);
+  };
   return (
     <div>
-      <div className="ss">
+      <div>
         <NavBar />
-        <div className="scc">
+        <div style={{ marginLeft: "15%" }} className="scc">
           <div className="green">
             <div className="rowHfidh">
               <div className="col-md-3 border-right">
@@ -65,13 +118,13 @@ export default function CreateAcoountEnseignant() {
                   </div>
                   <div className="mt-3">
                     <div className="col-md-12">
-                      <label className="labels">Mobile Number</label>
+                      <label className="labels">Email </label>
                       <input
-                        type="text"
+                        type="Email"
                         className="form-control"
-                        placeholder="enter phone number"
+                        placeholder="enter email "
                         onChange={(e) =>
-                          setName({ ...name, phone: e.target.value })
+                          setName({ ...name, email: e.target.value })
                         }
                       />
                     </div>
@@ -109,13 +162,13 @@ export default function CreateAcoountEnseignant() {
                       />
                     </div>
                     <div className="col-md-12">
-                      <label className="labels">Email </label>
+                      <label className="labels">Mobile Number</label>
                       <input
-                        type="Email"
+                        type="text"
                         className="form-control"
-                        placeholder="enter email "
+                        placeholder="enter phone number"
                         onChange={(e) =>
-                          setName({ ...name, email: e.target.value })
+                          setName({ ...name, phone: e.target.value })
                         }
                       />
                     </div>
@@ -124,7 +177,22 @@ export default function CreateAcoountEnseignant() {
                     <button
                       className="btn btn-primary profile-button"
                       type="button"
-                      onClick={(event) => {
+                      onClick={handle}
+                    >
+                      Save Profile
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}
+/*(event) => {
                         fetch("http://localhost:3000/store-data", {
                           method: "POST",
                           // We convert the React state to JSON and send it as the POST body
@@ -135,19 +203,4 @@ export default function CreateAcoountEnseignant() {
                         });
                         console.log(name);
                         event.preventDefault();
-                      }}
-                    >
-                      Save Profile
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
+                      }*/

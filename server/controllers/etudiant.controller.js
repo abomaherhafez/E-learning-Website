@@ -1,12 +1,9 @@
-const Etudiant = require('../models/etudiant');
-const bcrypt = require('bcrypt');
+const Etudiant = require("../models/etudiant");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { secret } = require("../config/jwt");
 
-
-
 class EtudiantController {
-
   register(req, res) {
     const etudiant = new Etudiant(req.body);
     etudiant
@@ -16,9 +13,10 @@ class EtudiantController {
           .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
             httpOnly: true,
           })
+          .status(200)
           .json({ msg: "success", etudiant: etudiant });
       })
-      .catch((err) => res.json(err));
+      .catch((err) => res.status(450).json(err));
   }
 
   login(req, res) {
@@ -32,12 +30,18 @@ class EtudiantController {
             .then((passwordIsValid) => {
               if (passwordIsValid) {
                 res
-                  .cookie("usertoken", jwt.sign({ _id: etudiant._id }, secret), {
-                    httpOnly: true,
-                  })
+                  .cookie(
+                    "usertoken",
+                    jwt.sign({ _id: etudiant._id }, secret),
+                    {
+                      httpOnly: true,
+                    }
+                  )
+                  .status(200)
+
                   .json({ msg: "success!" });
               } else {
-                res.json({ msg: "Invalid login attempt" }); //incorrect password
+                res.status(450).json({ msg: "Invalid login attempt" }); //incorrect password
               }
             })
             .catch((err) => res.json({ msg: "Invalid login attempt", err }));
@@ -57,11 +61,12 @@ class EtudiantController {
     res.clearCookie("usertoken");
     res.sendStatus(200);
   }
-  getEtudiant(req, res ){
-    Etudiant.findOne({_id:req.params.id})
-    .then(etudiant => res.status(201).json(etudiant))
-    .catch(error => res.status(400).json({error}));
+  getEtudiant(req, res) {
+    Etudiant.findOne({ _id: req.params.id })
+      .then((etudiant) => res.status(201).json(etudiant))
+      .catch((error) => res.status(400).json({ error }));
   }
+
   
  getAllEtudiant   (req, res) {
   Etudiant.find()
@@ -74,6 +79,7 @@ class EtudiantController {
           .then(() => res.status(200).json({ message: 'Objet supprimé !'}))
           .catch(error => res.status(400).json({ error }));
 }
+
 
 }
 
