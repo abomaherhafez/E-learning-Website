@@ -62,6 +62,18 @@ class EtudiantController {
     .then(etudiant => res.status(201).json(etudiant))
     .catch(error => res.status(400).json({error}));
   }
+  
+ getAllEtudiant   (req, res) {
+  Etudiant.find()
+  .then(etudiants => res.status(200).json(etudiants ))
+  .catch(error => res.status(400).json({ error }));
+ }
+
+ deleteEtudiant (req, res, next)  {
+        Etudiant.deleteOne({ _id: req.params.id })
+          .then(() => res.status(200).json({ message: 'Objet supprimé !'}))
+          .catch(error => res.status(400).json({ error }));
+}
 
 }
 

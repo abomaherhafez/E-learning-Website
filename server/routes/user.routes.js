@@ -11,6 +11,17 @@ const { authenticate } = require("../config/jwt");
     authenticate,
     UserController.getLoggedInUser
   );
-  router.get("/api/logout", UserController.logout);
+  router.get(
+    "/api/getloggedinenseignat",
+    authenticate,
+    UserController.getLoggedInEnseignat
+  );
+  router.get(
+    "/api/admin/getloggedinadmin",
+    authenticate,
+    UserController.getLoggedInAdmin
+  );
+
+ 
 
   module.exports = router;

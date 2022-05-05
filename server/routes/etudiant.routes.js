@@ -13,5 +13,8 @@ const { authenticate } = require("../config/jwt");
     etudiantCntrl.getLoggedInUser
   );
   router.get("/api/logoutEtudiant", etudiantCntrl.logout);
+  router.get('/etudiant/:id', etudiantCntrl.getEtudiant);
+  router.delete('/etudiant/:id', etudiantCntrl.deleteEtudiant);
+  router.get('/etudiant', etudiantCntrl.getAllEtudiant);
 
   module.exports = router;

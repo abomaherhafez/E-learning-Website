@@ -62,6 +62,18 @@ class EnseignantController {
     .then(enseignant => res.status(201).json(enseignant))
     .catch(error => res.status(400).json({error}));
   }
+  getAllenseignant  (req, res, next) {
+    Enseignant.find()
+    .then(enseignants => res.status(200).json(enseignants ))
+    .catch(error => res.status(400).json({ error }));
+}
+
+ 
+ deleteEnseignant = (req, res, next) => {
+    Enseignant.deleteOne({ _id: req.params.id })
+            .then(() => res.status(200).json({ message: 'Objet supprimé !'}))
+            .catch(error => res.status(400).json({ error }));
+}
 }
 
 module.exports = new EnseignantController();
