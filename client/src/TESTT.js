@@ -1,29 +1,9 @@
 import React from "react";
+import "./TESTT.css";
 import { useState } from "react";
-import { useEffect } from "react";
-import "../seances/tableseanczes.css";
-import axios from "axios";
-export default function TableEnseignant() {
-  /* useEffect(() => {
-    async function getResults() {
-      const results = await axios.Post(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      setEnseignant(results.data);
-    }
-    getResults();
-  }, []);*/
-  /*  useEffect(() => {
-    axios
-      .post('http://localhost:3001/create', refus)
-      .then(() => console.log('Book Created'))
-      .catch(err => {
-        console.error(err);
-      });
-  };
-    
-  },[])*/
-  const styleemail = { paddingLeft: "180px" };
+import SeqnceqfichheCard from "./Admin/Cards/SeqnceqfichheCard";
+
+export default function TESTT() {
   const [Enseignant, setEnseignant] = useState([
     {
       id: 1,
@@ -61,9 +41,6 @@ export default function TableEnseignant() {
       spécialité: "n7ebk mot",
     },
   ]);
-  const [refus, setrefus] = useState({});
-  const style = { marginLeft: "15px" };
-
   const ahmed = Enseignant;
   return (
     <div>
@@ -97,8 +74,6 @@ export default function TableEnseignant() {
 
                 <div className="table-data">
                   <div
-                    style={{ width: "150px", margin: "auto" }}
-                    className="success"
                     onClick={() => {
                       const ahme = ahmed.filter(
                         (element) => element.id !== e.id
@@ -106,21 +81,7 @@ export default function TableEnseignant() {
                       setEnseignant(ahme);
                     }}
                   >
-                    Acceptation
-                  </div>
-                  <div
-                    style={{ width: "150px", margin: "auto", marginTop: "5px" }}
-                    className="danger"
-                    onClick={() => {
-                      const ahme = ahmed.filter(
-                        (element) => element.id !== e.id
-                      );
-                      setEnseignant(ahme);
-                      setrefus(e);
-                      console.log(refus);
-                    }}
-                  >
-                    Refus
+                    supprimer
                   </div>
                 </div>
               </div>

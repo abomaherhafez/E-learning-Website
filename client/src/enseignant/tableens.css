@@ -1,0 +1,53 @@
+.thtrTheadforpadding {
+    text-align: center;
+  
+  }
+  .tdtrTbodypadding {
+    padding: 0;
+    text-align: center;
+  }
+  .Tableseqncesadmincss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  
+  
+  
+  
+  
+  .success {
+    border: solid;
+    border-color: #04AA6D;
+    color: green;
+  }
+  
+  .success:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .danger {
+    border: solid;
+  
+    border-color: #f44336;
+    color: red;
+  }
+  
+  .danger:hover {
+    background: #f44336;
+    color: white;
+  }
+  .info {
+    border: solid;
+  
+    border-color: #2196F3;
+    color:black;
+  }
+  
+  .info:hover {
+    background: #2196F3;
+    color: white;
+  }

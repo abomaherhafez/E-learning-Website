@@ -10,11 +10,11 @@ export default function Seances() {
       <div className="sidebarespace">
         <Sidebarvol />
       </div>
-      <div className="Tableseqncesadmincss">
+      <div style={{ width: "100%" }}>
         <Tableseqncesadmin />
       </div>
       <h2 className="h2Pageenseignant">seances existants</h2>
-      <div style={style} className="Tableseqncesadmincss">
+      <div>
         <TableSeancedejaExist />
       </div>
     </div>

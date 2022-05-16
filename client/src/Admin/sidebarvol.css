@@ -50,7 +50,7 @@ nav.main-menu.expanded {
 
 .main-menu li {
   position: relative;
-  display: block;
+  margin-top: 6px;
   width: 250px;
 }
 

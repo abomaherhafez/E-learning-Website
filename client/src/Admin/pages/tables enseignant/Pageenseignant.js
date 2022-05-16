@@ -11,11 +11,12 @@ export default function Pageenseignant() {
       <div className="sidebarespace">
         <Sidebarvol />
       </div>
-      <div className="Tableseqncesadmincss">
-        <TableEnseignant />
+
+      <div className="one h11">
+        <h1 className="h11 h2Pageenseignant">Enseignants existants</h1>
       </div>
-      <h2 className="h2Pageenseignant"> Enseignants existants </h2>
-      <div style={style} className="Tableseqncesadmincss">
+      <h2 className="h2Pageenseignant"> </h2>
+      <div>
         <TableEnseginantelmajoud />
       </div>
     </div>

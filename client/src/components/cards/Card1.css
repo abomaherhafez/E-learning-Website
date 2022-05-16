@@ -45,12 +45,19 @@
 }
 .buttoncard1:hover {
   color: white;
-  box-shadow: inset 0 -100px 0 0 #145005;
+  box-shadow: inset 0 -100px 0 0 #80af74;
 }
 .buttoncard1:active {
-  transform: scale(0.9);
+  transform: scale(0.9);  
 }
 .linktolink {
   text-decoration: none;
   color: black;
+}
+.linktolink:hover {
+  text-decoration: none;
+  color: black;
+}
+.h1card1{
+  color: #80af74;
 }

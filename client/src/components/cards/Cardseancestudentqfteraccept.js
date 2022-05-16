@@ -4,15 +4,7 @@ import Footer from "../footer/Footer";
 import NavBar from "../NavBar";
 
 export default function Cardseancestudentqfteraccept() {
-  const [seance, setseance] = useState({
-    date: "2022-07-22",
-    tilte: "El title",
-    duree: "3:30hours",
-    heureDebut: "22:30",
-    heurefin: "2:00",
-    dec: "lroem qjvh;ghqn knqbjimqkbjq hj q, qjh q qjkjgcjgh;gj",
-    lienZoom: "https://www.google.com/",
-  });
+  const [seance, setseance] = useState();
   return (
     <div>
       <NavBar />

@@ -28,7 +28,7 @@ function NavBar() {
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                       <li className="nav-item">
                         <NavLink
-                          to="/Home"
+                          to="/HomeaccountStudent"
                           activeClassName="active"
                           className="nav-links"
                           onClick={handleClick}
@@ -56,6 +56,7 @@ function NavBar() {
                           onClick={handleClick}
                           onMouseUp={() => {
                             localStorage.setItem("type-inscription", "hhhh");
+                            localStorage.setItem("id", "");
                           }}
                         >
                           log out
@@ -107,6 +108,7 @@ function NavBar() {
                             onClick={handleClick}
                             onMouseUp={() => {
                               localStorage.setItem("type-inscription", "hhhh");
+                              localStorage.setItem("id", "");
                             }}
                           >
                             log out

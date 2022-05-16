@@ -23,6 +23,9 @@ import Pageenseignant from "./Admin/pages/tables enseignant/Pageenseignant";
 import Studentsdachboard from "./Admin/pages/tables student/Studentsdachboard";
 import AccountTestSEttings from "./enseignant/AccountTestSEttings";
 import StudentAccountsetttings from "./student/StudentAccountsetttings";
+import TESTT from "./TESTT";
+import Updateseance from "./enseignant/Updateseance";
+import PageseanceEE from "./student/PageseanceEE";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -44,6 +47,9 @@ function App() {
           <Router>
             <div className="pages">
               <Switch>
+                <Route path="/tt">
+                  <TESTT />
+                </Route>
                 <Route exact path="/">
                   <Home />
                 </Route>
@@ -83,6 +89,9 @@ function App() {
                         <Route path="/Account-etudent-settings">
                           <StudentAccountsetttings />
                         </Route>
+                        <Route path="/ee">
+                          <PageseanceEE />
+                        </Route>
                       </>
                     );
                   } else if (navprop == "ens") {
@@ -101,12 +110,15 @@ function App() {
                         <Route path="/Account-ensingiant-settings">
                           <AccountTestSEttings />
                         </Route>
+                        <Route path="/update seance">
+                          <Updateseance />
+                        </Route>
                         <Route path="/ee">
                           <SeanceEnsginent />
                         </Route>
                       </>
                     );
-                  } else if (navprop === "hhhh") {
+                  } else if (navprop === "admin") {
                     return (
                       <>
                         {/*admin*/}

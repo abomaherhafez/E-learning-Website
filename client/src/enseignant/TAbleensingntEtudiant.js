@@ -1,21 +1,24 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./tableseanczes.css";
+import "../Admin/pages/seances/tableseanczes.css";
 
-export default function Tableseqncesadmin() {
+export default function TAbleensingntEtudiant() {
+  const idd = localStorage.getItem("idseance");
   useEffect(() => {
     (async () => {
-      const rawResponse = await fetch("http://localhost:3500/seanceEnAttente", {
-        method: "get",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(),
-      });
+      const rawResponse = await fetch(
+        "http://localhost:3500/getEtudiantAssisterEnAttente/" + idd,
+        {
+          method: "get",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(),
+        }
+      );
 
       const content = await rawResponse.json();
-      setid(content);
       console.log(content);
     })();
   }, []);
@@ -25,33 +28,27 @@ export default function Tableseqncesadmin() {
 
   return (
     <div>
-      <div className="containerrrr">
+      <div>
         <div className="table">
           <div className="table-header">
             <div className="header__item">
-              <p className="filter__link">Titre</p>
+              <p className="filter__link">nom</p>
             </div>
             <div className="header__item">
-              <p className="filter__link">DATE</p>
+              <p className="filter__link filter__link--number">prenom</p>
             </div>
-
+            <div className="header__item">
+              <p className="filter__link filter__link--number">Email</p>
+            </div>
+            <div className="header__item">
+              <p className="filter__link filter__link--number">niveau</p>
+            </div>
             <div className="header__item">
               <p className="filter__link filter__link--number">
-                heure de Debut
+                numero de telephone
               </p>
             </div>
-            <div className="header__item">
-              <p className="filter__link filter__link--number">heure de Fin</p>
-            </div>
-            <div className="header__item">
-              <p className="filter__link filter__link--number">Lien Zoom</p>
-            </div>
-            <div className="header__item">
-              <p className="filter__link filter__link--number">appartenant à</p>
-            </div>
-            <div className="header__item">
-              <p className="filter__link filter__link--number">Description</p>
-            </div>
+
             <div className="header__item">
               <p className="filter__link filter__link--number">Action</p>
             </div>
@@ -59,13 +56,11 @@ export default function Tableseqncesadmin() {
           {id.map((e) => (
             <div key={e._id} className="table-content">
               <div className="table-row">
-                <div className="table-data">{e.title}</div>
-                <div className="table-data">{e.date}</div>
-                <div className="table-data">{e.heureDebut}</div>
-                <div className="table-data">{e.heureFin}</div>
-                <div className="table-data">{e.lienZoom}</div>
-                <div className="table-data">{e.enseignantId}</div>
-                <div className="table-data">{e.description}</div>
+                <div className="table-data">{e.lastName}</div>
+                <div className="table-data">{e.firstName}</div>
+                <div className="table-data">{e.email}</div>
+                <div className="table-data">{e.niveau}</div>
+                <div className="table-data">{e.phone}</div>
                 <div className="table-data">
                   <div
                     className="success"

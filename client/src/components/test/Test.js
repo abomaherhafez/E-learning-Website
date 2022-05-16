@@ -6,17 +6,19 @@ export default function () {
     <div className="divTestser9a">
       <section className="module2">
         <div className="how-it-works">
-          <h2 className="row center-xs textclass">How does E-learning work?</h2>
+          <h2 className="row center-xs textclass">
+            Comment fonctionne E-learning travail?
+          </h2>
           <h3 className="row center-xs">
-            It's easy! Live classes with an online private tutor
+            C'est facile! Cours en direct avec un tuteur privé en ligne
           </h3>
           <div className="row max-width separator">
             <div className="col-sm-5 col-xs-12 text-right">
-              <p className="head-line">Find your perfect tutor</p>
+              <p className="head-line">Trouvez votre séance idéal</p>
               <div className="paragraph">
-                You'll find your ideal tutor among the thousands who are
-                registered on our platform. He or she will tailor the course to
-                your needs and help you to achieve your goals.
+                Vous trouverez votre seance idéale parmi les Inscrits sur notre
+                plateforme. He or she will tailor the course to your needs and
+                help you to achieve your goals.
               </div>
             </div>
             <div className="col-sm-2 col-xs-12 first">
@@ -43,7 +45,9 @@ export default function () {
               <div className="circle gradient">2</div>
             </div>
             <div className="col-sm-5 col-xs-12 first">
-              <p className="head-line">You choose when to take your classes</p>
+              <p className="head-line">
+                Vous trouverez quand prendre votre séance
+              </p>
               <div className="paragraph">
                 Choose an online tutor according to your availability and enjoy
                 the flexibility of online classes.

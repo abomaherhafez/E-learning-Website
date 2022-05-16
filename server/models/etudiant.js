@@ -9,25 +9,25 @@ const EtudiantSchema = new mongoose.Schema(
       minlength: [3, "lastName must be at least 3 characters"],
     },
     firstName: {
-      type: String,
-      required: [true, "firstName is required"],
-      minlength: [3, "firstName must be at least 3 characters"],
-    },
-    phone: {
-      type: String,
-      required: [true, "phone is required"],
-      minlength: [3, "phone must be at least 3 characters"],
-    },
-    niveau: {
-      type: String,
-      required: [true, "niveau is required"],
-      minlength: [3, "niveau must be at least 3 characters"],
-    },
-    DateOfBirth: {
-      type: String,
-      required: [true, "DateOfBirth is required"],
-      minlength: [3, "DateOfBirth must be at least 3 characters"],
-    },
+        type: String,
+        required: [true, "firstName is required"],
+        minlength: [3, "firstName must be at least 3 characters"],
+      },
+      phone: {
+        type: String,
+        required: [true, "phone is required"],
+        minlength: [3, "phone must be at least 3 characters"],
+      },
+      niveau: {
+        type: String,
+        required: [true, "niveau is required"],
+        minlength: [3, "niveau must be at least 3 characters"],
+      },
+      DateOfBirth: {
+        type: String,
+        required: [true, "DateOfBirth is required"],
+        minlength: [3, "DateOfBirth must be at least 3 characters"],
+      },
     email: {
       type: String,
       required: [true, "Email is required"],

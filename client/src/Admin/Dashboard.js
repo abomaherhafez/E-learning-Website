@@ -3,7 +3,6 @@ import Sidebarvol from "./Sidebarvol";
 import Cardadmin1 from "../Admin/Cards/Cardadmin1";
 import "./Dashboraed.css";
 import Cardadmin2 from "../Admin/Cards/Cardadmin2";
-import Cardadmin3 from "../Admin/Cards/Cardadmin3";
 import Cardadmin4 from "../Admin/Cards/Cardadmin4";
 import TEstt from "../test/TEstt";
 export default function Dashboard() {
@@ -14,7 +13,6 @@ export default function Dashboard() {
         <div className="cardqdmindqsh">
           <Cardadmin1 />
           <Cardadmin2 />
-          <Cardadmin3 />
           <Cardadmin4 />
         </div>
       </div>

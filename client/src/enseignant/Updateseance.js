@@ -7,6 +7,7 @@ import "./CreateSeance.css";
 export default function CreateSeance() {
   const [visibility, setvisibility] = useState("hidden");
   const [visibilityy, setvisibilityy] = useState("hidden");
+  const idd = localStorage.getItem("idseance");
   const id = localStorage.getItem("id");
 
   const [seance, setseance] = useState({
@@ -30,9 +31,9 @@ export default function CreateSeance() {
             console.log(seance);
             (async () => {
               const rawResponse = await fetch(
-                "http://localhost:3500/creerseance",
+                "http://localhost:3500/miseajour/" + idd,
                 {
-                  method: "post",
+                  method: "put",
                   headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json",
@@ -43,7 +44,7 @@ export default function CreateSeance() {
 
               const content = await rawResponse.json();
               console.log(content);
-              if (content._message === "Seance validation failed") {
+              if (content._message === "Seance miseajour failed") {
                 setvisibility("visible");
               } else {
                 setvisibilityy("visible");
@@ -51,7 +52,7 @@ export default function CreateSeance() {
             })();
           }}
         >
-          <h1>cree seance</h1>
+          <h1>mettre à jour seance</h1>
           <div className="content">
             <div className="input-field">
               <input
@@ -134,20 +135,20 @@ export default function CreateSeance() {
           </div>
           {visibilityy === "visible" ? (
             <p style={{ textAlign: "center" }}>
-              Une demande de création de seance a été envoyée
+              Une demande de mettre à jour seance a été envoyée
             </p>
           ) : (
             <></>
           )}
           {visibility === "visible" ? (
             <p style={{ textAlign: "center" }}>
-              La demande de création de seance n'a pas été envoyée
+              La demande de mettre à jour seance n'a pas été envoyée
             </p>
           ) : (
             <></>
           )}
           <div className="action">
-            <button type="submit">créer séance</button>
+            <button type="submit">mettre à jour séance</button>
           </div>
         </form>
       </div>

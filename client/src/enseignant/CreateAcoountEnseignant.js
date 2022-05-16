@@ -3,11 +3,11 @@ import "../student/CreateaccountStudint.css";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 export default function CreateAcoountEnseignant() {
   const history = useHistory();
+  const [val, setval] = useState();
   const [name, setName] = useState({
     lastname: "",
     firstname: "",
@@ -18,11 +18,12 @@ export default function CreateAcoountEnseignant() {
     email: "",
   });
   const handle = () => {
-    /*(async () => {
+    console.log(name);
+    (async () => {
       const rawResponse = await fetch(
         "http://localhost:3500/api/registerEnseignant",
         {
-          method: "POST",
+          method: "post",
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
@@ -36,19 +37,18 @@ export default function CreateAcoountEnseignant() {
             DateOfBirth: name.DateOfBirth,
             email: name.email,
           }),
-
         }
-
       );
-      if(rawResponse){
-        history
-      }
 
       const content = await rawResponse.json();
-
       console.log(content);
-
-    })();*/
+      if (content._message == "Enseignant validation failed") {
+        setval(true);
+      } else {
+        history.push("/sign-in");
+      }
+    })();
+    /*
     axios
       .post("http://localhost:3500/api/registerEnseignant", {
         lastName: name.lastname,
@@ -66,7 +66,7 @@ export default function CreateAcoountEnseignant() {
         }
       })
       .catch((err) => console.log(err));
-    console.log(name);
+    console.log(name);*/
   };
   return (
     <div>
@@ -141,14 +141,30 @@ export default function CreateAcoountEnseignant() {
                     </div>
                     <div className="col-md-12">
                       <label className="labels">spécialité</label>
-                      <input
+                      {/* <input
                         type="text"
                         className="form-control"
                         placeholder="enter votre spécialité "
                         onChange={(e) =>
                           setName({ ...name, spécialité: e.target.value })
                         }
-                      />
+                      />*/}
+                      <div>
+                        <select
+                          onChange={(e) => {
+                            console.log(name.spécialité);
+                            setName({
+                              ...name,
+                              spécialité: e.target.value,
+                            });
+                          }}
+                        >
+                          <option value="grapefruit">Grapefruit</option>
+                          <option value="lime">Lime</option>
+                          <option value="coconut">Coconut</option>
+                          <option value="mango">Mango</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div className="col-md-12">
@@ -173,13 +189,20 @@ export default function CreateAcoountEnseignant() {
                       />
                     </div>
                   </div>
+                  {val == true ? (
+                    <p style={{ textAlign: "center" }}>
+                      Vérifiez les champs à remplir
+                    </p>
+                  ) : (
+                    <></>
+                  )}
                   <div className="mt-5 text-center">
                     <button
                       className="btn btn-primary profile-button"
                       type="button"
                       onClick={handle}
                     >
-                      Save Profile
+                      Enregistrer le profil
                     </button>
                   </div>
                 </div>
@@ -192,15 +215,3 @@ export default function CreateAcoountEnseignant() {
     </div>
   );
 }
-/*(event) => {
-                        fetch("http://localhost:3000/store-data", {
-                          method: "POST",
-                          // We convert the React state to JSON and send it as the POST body
-                          body: JSON.stringify(name),
-                        }).then(function (response) {
-                          console.log(response);
-                          return response.json();
-                        });
-                        console.log(name);
-                        event.preventDefault();
-                      }*/

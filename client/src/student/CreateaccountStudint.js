@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 
 export default function CreateaccountStudint() {
   const history = useHistory();
+  const [val, setval] = useState();
 
   const [name, setName] = useState({
     lastname: "",
@@ -19,24 +20,35 @@ export default function CreateaccountStudint() {
     email: "",
   });
   const handle = () => {
-    axios
-      .post("http://localhost:3500/api/registerEnseignant", {
-        lastName: name.lastname,
-        firstName: name.firstname,
-        phone: name.phone,
-        password: name.password,
-        niveau: name.niveau,
-        DateOfBirth: name.DateOfBirth,
-        email: name.email,
-      })
-      .then((res) => {
-        console.log(res);
-        if (res) {
-          history.push("/sign-in");
+    (async () => {
+      const rawResponse = await fetch(
+        "http://localhost:3500/api/registerEtudiant",
+        {
+          method: "post",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            lastName: name.lastname,
+            firstName: name.firstname,
+            phone: name.phone,
+            password: name.password,
+            niveau: name.niveau,
+            DateOfBirth: name.DateOfBirth,
+            email: name.email,
+          }),
         }
-      })
-      .catch((err) => console.log(err));
-    console.log(name);
+      );
+
+      const content = await rawResponse.json();
+      console.log(content);
+      if (content._message == "Etudiant validation failed") {
+        setval(true);
+      } else {
+        history.push("/sign-in");
+      }
+    })();
   };
 
   return (
@@ -144,6 +156,13 @@ export default function CreateaccountStudint() {
                       />
                     </div>
                   </div>
+                  {val == true ? (
+                    <p style={{ textAlign: "center" }}>
+                      Vérifiez les champs à remplir
+                    </p>
+                  ) : (
+                    <></>
+                  )}
                   <div className="mt-5 text-center">
                     <button
                       className="btn btn-primary profile-button"

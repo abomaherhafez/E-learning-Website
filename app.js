@@ -6,6 +6,7 @@ const enseignantRoutes = require("./server/routes/enseignant.routes");
 const etudiantRoutes = require("./server/routes/etudiant.routes");
 const seanceRoutes = require("./server/routes/seance.routes");
 const userRoutes = require("./server/routes/user.routes");
+const assisterRouter = require("./server/routes/assisterSeance.routes");
 
 // const conf = require('./server/config/mongoose.config');
 const app = express();
@@ -38,5 +39,5 @@ app.use("/", seanceRoutes);
 app.use("/", etudiantRoutes);
 app.use("/", enseignantRoutes);
 app.use(userRoutes);
-
+app.use("/", assisterRouter);
 module.exports = app;

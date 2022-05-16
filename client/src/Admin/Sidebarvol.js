@@ -47,29 +47,14 @@ export default function Sidebarvol() {
             <span className="nav-text">étudiants</span>
           </Link>
         </li>
-
-        <li>
-          <Link>
-            <i className="fa fa-bar-chart-o fa-2x"></i>
-            <span className="nav-text">Graphs and Statistics</span>
-          </Link>
-        </li>
-        <li>
-          <Link>
-            <i className="fa fa-font fa-2x"></i>
-            <span className="nav-text">Quotes</span>
-          </Link>
-        </li>
-        <li>
-          <Link>
-            <i className="fa fa-table fa-2x"></i>
-            <span className="nav-text">Tables</span>
-          </Link>
-        </li>
       </ul>
       <ul className="logout">
-        <li>
-          <Link>
+        <li
+          onClick={() => {
+            localStorage.setItem("type-inscription", "");
+          }}
+        >
+          <Link to="/sign-in">
             <i className="fa fa-power-off fa-2x"></i>
             <span className="nav-text">Logout</span>
           </Link>
