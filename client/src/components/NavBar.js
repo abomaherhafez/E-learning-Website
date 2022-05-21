@@ -36,6 +36,16 @@ function NavBar() {
                           Home
                         </NavLink>
                       </li>
+                      <li className="nav-item">
+                        <NavLink
+                          to="/mon-séances"
+                          activeClassName="active"
+                          className="nav-links"
+                          onClick={handleClick}
+                        >
+                          mon séances
+                        </NavLink>
+                      </li>
 
                       <li className="nav-item">
                         <NavLink

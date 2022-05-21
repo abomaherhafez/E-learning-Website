@@ -26,6 +26,9 @@ import StudentAccountsetttings from "./student/StudentAccountsetttings";
 import TESTT from "./TESTT";
 import Updateseance from "./enseignant/Updateseance";
 import PageseanceEE from "./student/PageseanceEE";
+import Pageseanceqq from "./student/Pageseanceqq";
+import MonSéances from "./student/MonSéances";
+import Pageseancecc from "./student/Pageseancecc";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -91,6 +94,15 @@ function App() {
                         </Route>
                         <Route path="/ee">
                           <PageseanceEE />
+                        </Route>
+                        <Route path="/qq">
+                          <Pageseanceqq />
+                        </Route>
+                        <Route path="/cc">
+                          <Pageseancecc />
+                        </Route>
+                        <Route path="/mon-séances">
+                          <MonSéances />
                         </Route>
                       </>
                     );

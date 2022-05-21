@@ -2,13 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../Admin/pages/seances/tableseanczes.css";
 import EtudiantinTableCallApiInMap from "./EtudiantinTableCallApiInMap";
-
-export default function TAbleensingntEtudiant() {
+export default function TableEtudiantaccepter() {
   const idd = localStorage.getItem("idseance");
   useEffect(() => {
     (async () => {
       const rawResponse = await fetch(
-        "http://localhost:3500/getEtudiantAssisterEnAttente/" + idd,
+        "http://localhost:3500/getEtudiantAssisterAccepter/" + idd,
         {
           method: "get",
           headers: {
@@ -60,63 +59,14 @@ export default function TAbleensingntEtudiant() {
                   <EtudiantinTableCallApiInMap e={e} />
                   <div className="table-data">
                     <div
-                      className="success"
-                      style={{
-                        width: "100%" /*
-                      borderStyle: "dashed",
-                      borderColor: "#008300",
-                    */,
-                      }}
-                      onClick={() => {
-                        (async () => {
-                          const rawResponse = await fetch(
-                            "http://localhost:3500/acceptationAssisterSeance/" +
-                              e._id,
-                            {
-                              method: "put",
-                              headers: {
-                                Accept: "application/json",
-                                "Content-Type": "application/json",
-                              },
-                              body: JSON.stringify({ ok: true }),
-                            }
-                          );
-
-                          const content = await rawResponse.json({});
-
-                          console.log(content);
-                        })();
-                        /*(async () => {
-                          const rawResponse = await fetch(
-                            "http://localhost:3500/getEtudiantAssisterEnAttente/" +
-                              idd,
-                            {
-                              method: "get",
-                              headers: {
-                                Accept: "application/json",
-                                "Content-Type": "application/json",
-                              },
-                              body: JSON.stringify(),
-                            }
-                          );
-
-                          const content = await rawResponse.json();
-                          setid(content);
-                          console.log(content);
-                        })();*/
-                      }}
-                    >
-                      Acceptation
-                    </div>
-                    <div
                       style={{
                         width: "100%",
                         marginTop: "3px",
                         /*border: "1px  dashed  #e30000",
-                      borderRadius: "5px",
-                     
-                      borderColor: "#04AA6D",
-                      Color: "green",*/
+                        borderRadius: "5px",
+                       
+                        borderColor: "#04AA6D",
+                        Color: "green",*/
                       }}
                       className="danger"
                       onClick={() => {
@@ -140,26 +90,26 @@ export default function TAbleensingntEtudiant() {
                           console.log(e.sId);
                         })();
                         /* (async () => {
-                          const rawResponse = await fetch(
-                            "http://localhost:3500/getEtudiantAssisterEnAttente/" +
-                              idd,
-                            {
-                              method: "get",
-                              headers: {
-                                Accept: "application/json",
-                                "Content-Type": "application/json",
-                              },
-                              body: JSON.stringify(),
-                            }
-                          );
-
-                          const content = await rawResponse.json();
-                          setid(content);
-                          console.log(content);
-                        })();*/
+                            const rawResponse = await fetch(
+                              "http://localhost:3500/getEtudiantAssisterEnAttente/" +
+                                idd,
+                              {
+                                method: "get",
+                                headers: {
+                                  Accept: "application/json",
+                                  "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(),
+                              }
+                            );
+  
+                            const content = await rawResponse.json();
+                            setid(content);
+                            console.log(content);
+                          })();*/
                       }}
                     >
-                      Refus
+                      supprimer
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
-export default function PageseanceEE() {
+export default function Pageseancecc() {
   const id = localStorage.getItem("idseance");
   const idd = localStorage.getItem("id");
   useEffect(() => {
@@ -45,42 +45,23 @@ export default function PageseanceEE() {
                 </h5>
                 <h5>Heure de Fin:{affiche.heureFin} </h5>
               </div>
-              <div style={{ display: "flex", justifyContent: " center" }}>
-                <button
-                  className="butt"
-                  onClick={() => {
-                    (async () => {
-                      const rawResponse = await fetch(
-                        "http://localhost:3500/assisterSeance",
-                        {
-                          method: "post",
-                          headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                          },
-                          body: JSON.stringify({ sId: id, etId: idd }),
-                        }
-                      );
+              <h4
+                style={{
+                  marginBottom: "3px",
+                  alignItems: "center",
+                  backgroundImage:
+                    "linear-gradient(144deg, #50ff40, #429ef3 50%, #85eb00)",
 
-                      const content = await rawResponse.json();
-                      if (content.sId == id && content.etId == idd) {
-                        setdeamand(true);
-                      } else {
-                        setdeamand(false);
-                      }
-                    })();
-                  }}
-                >
-                  <span className="text">Demande de participation</span>
-                </button>
-              </div>
-              {deamand === true ? (
-                <p style={{ textAlign: "center" }}>
-                  La demande de participation a été envoyée
-                </p>
-              ) : (
-                <></>
-              )}
+                  boxShadow: "rgb(117 0 252 / 20%) 0 15px 30px -5px",
+                  boxSizing: "border-box",
+                  color: "#ffffff",
+                  display: "flex",
+
+                  justifyContent: "center",
+                }}
+              >
+                La demande de participation a été envoyée
+              </h4>
             </section>
           </div>
         </div>

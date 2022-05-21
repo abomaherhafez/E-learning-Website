@@ -4,13 +4,16 @@ import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
 import { useHistory } from "react-router-dom";
 import TAbleensingntEtudiant from "./TAbleensingntEtudiant";
+import TableEtudiantaccepter from "./TableEtudiantaccepter";
 
 export default function SeanceEnsginent() {
   const history = useHistory();
 
   const id = localStorage.getItem("idseance");
   const [affiche, setaffiche] = useState({});
-  const [profile, setprofile] = useState();
+  const [attente, setattente] = useState(false);
+  const [accept, setaccept] = useState(false);
+
   useEffect(() => {
     (async () => {
       const rawResponse = await fetch("http://localhost:3500/seance/" + id, {
@@ -89,10 +92,41 @@ export default function SeanceEnsginent() {
           </div>
         </div>
       </div>
-
-      <div>
-        <TAbleensingntEtudiant />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button
+          style={{ marginRight: "10px" }}
+          className="btn btn-primary"
+          onClick={() => {
+            if (attente != true) setattente(true);
+            else setattente(false);
+          }}
+        >
+          étudiants en attente
+        </button>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            if (accept != true) setaccept(true);
+            else setaccept(false);
+          }}
+        >
+          étudiants accepter
+        </button>
       </div>
+      {attente === true ? (
+        <div>
+          <TAbleensingntEtudiant />
+        </div>
+      ) : (
+        <></>
+      )}
+      {accept == true ? (
+        <div>
+          <TableEtudiantaccepter />
+        </div>
+      ) : (
+        <></>
+      )}
       <Footer />
     </div>
   );
