@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Footer from "../footer/Footer";
 import NavBar from "../NavBar";
+import Testfooter from "../Testfooter";
 
 export default function Cardseancestudentqfteraccept() {
   const [seance, setseance] = useState();
@@ -24,7 +25,7 @@ export default function Cardseancestudentqfteraccept() {
           <h4>lien seance: {seance.lienZoom}</h4>
         </section>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

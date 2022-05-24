@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../footer/Footer";
 import NavBar from "./NavBar";
 import "./About.css";
+import Testfooter from "../Testfooter";
 export default function About() {
   const x = window.location.href;
   console.log(x);
@@ -9,7 +10,7 @@ export default function About() {
     <div>
       <NavBar />
       <div className="about"></div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

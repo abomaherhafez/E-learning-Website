@@ -19,7 +19,7 @@ function NavBar() {
           <nav className="navbar">
             <div className="nav-container">
               <NavLink to="/" className="nav-logo">
-                E-learaning
+                E-learning
               </NavLink>
 
               {(() => {

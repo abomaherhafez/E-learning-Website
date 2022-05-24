@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Marvel:400,700");
+
+
+#info {
+  background-color: #FFFFFF;
+  padding: 2rem 0; }
+
+.rowrowrow {
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #FFFFFF; }
+
+.cardddddddddddddddddddd {
+  display: inline-block;
+  width: 100%;
+  padding: 4rem 1rem 7rem 1rem;
+  background-color: teal;
+  position: relative; }
+  .cardddddddddddddddddddd:after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    background-color: skyblue;
+    top: 0px;
+    right: 0px;
+    border-bottom: 20px solid #006667;
+    border-left: 20px solid #006667;
+    border-right: 20px solid #FFFFFF;
+    border-top: 20px solid #FFFFFF;
+    position: absolute;
+    filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5)); }
+  .cardddddddddddddddddddd:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 40px solid #006667;
+    border-right: 40px solid #006667;
+    border-left: 40px solid #FFFFFF;
+    border-bottom: 40px solid #FFFFFF;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+    margin-right: 10%; }
+  .cardddddddddddddddddddd:nth-of-type(1) {
+    margin-right: 9%; }
+  .cardddddddddddddddddddd h2 {
+    color: snow;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .cardddddddddddddddddddd p {
+    color: snow;
+    font-size: 1.1rem;
+    line-height: 140%; }
+.buttborderpageee{text-align: center; 
+    /* width: 20px; */
+    width: 250px;
+    height: 40px;
+    justify-content: center;
+    /* margin: auto; */
+    background: #F5B921;
+    display: flex;
+    border-color: #F5B921;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.buttborderpageee:hover{    background: #fdc73ff7;
+    }   

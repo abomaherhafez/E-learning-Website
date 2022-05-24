@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
+import Testfooter from "../components/Testfooter";
 import "./CreateSeance.css";
 
 export default function CreateSeance() {
@@ -112,16 +113,7 @@ export default function CreateSeance() {
                 }}
               />*/}
             </div>
-            <div className="input-field">
-              <textarea
-                required
-                className="textareawidth"
-                placeholder="description"
-                onChange={(e) => {
-                  setseance({ ...seance, description: e.target.value });
-                }}
-              ></textarea>
-            </div>
+
             <div className="input-field">
               <input
                 required
@@ -131,6 +123,16 @@ export default function CreateSeance() {
                   setseance({ ...seance, lienZoom: e.target.value });
                 }}
               />
+            </div>
+            <div className="input-field">
+              <textarea
+                required
+                className="textareawidth"
+                placeholder="description"
+                onChange={(e) => {
+                  setseance({ ...seance, description: e.target.value });
+                }}
+              ></textarea>
             </div>
           </div>
           {visibilityy === "visible" ? (
@@ -152,7 +154,7 @@ export default function CreateSeance() {
           </div>
         </form>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

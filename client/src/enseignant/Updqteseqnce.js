@@ -4,6 +4,7 @@ import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
 import "./updateseance.css";
+import Testfooter from "../components/Testfooter";
 
 export default function Updqteseqnce() {
   const [seance, setseance] = useState({
@@ -28,7 +29,7 @@ export default function Updqteseqnce() {
         </div>
         <div className="elKbira-BlKol">
           <img
-            src="https://static.scientificamerican.com/blogs/cache/file/15E43A6F-3941-471A-BF4A81AECDC8C8AA_source.jpg?w=590&h=800&19535223-FF51-4AE3-A05064AFC6E375F5"
+            src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/04/01170800/Free-Online-Courses-with-Certificates.jpg"
             className="imagee"
           />
           {/**/}
@@ -135,7 +136,7 @@ export default function Updqteseqnce() {
           <span className="text">update</span>
         </button>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

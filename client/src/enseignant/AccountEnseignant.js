@@ -1,10 +1,12 @@
 import React from "react";
 import "./AccountEnseignant.css";
 import NavBar from "../components/NavBar";
-import Footer from "../components/footer/Footer";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./tesr.css"
 import Card11 from "./Card11";
+import Testfooter from "../components/Testfooter";
+import TESTT from "./TESTT";
 
 export default function AccountEnseignant() {
   const id = localStorage.getItem("id");
@@ -41,14 +43,17 @@ export default function AccountEnseignant() {
         <div className="one h11">
           <h1 className="h11">votre séances</h1>
         </div>
-        <div className="center-cards">
+        <div className="card-list">
           {reverse.map((e) => (
-            <Card11 key={e._id} e={e} />
+            <TESTT key={e._id} e={e} />
           ))}
+
         </div>
+
+
         <div className="divtable"></div>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

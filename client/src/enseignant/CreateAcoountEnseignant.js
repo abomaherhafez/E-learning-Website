@@ -4,6 +4,7 @@ import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
 import { useHistory } from "react-router-dom";
+import Testfooter from "../components/Testfooter";
 
 export default function CreateAcoountEnseignant() {
   const history = useHistory();
@@ -211,7 +212,7 @@ export default function CreateAcoountEnseignant() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

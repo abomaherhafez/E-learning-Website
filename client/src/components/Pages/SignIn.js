@@ -8,6 +8,7 @@ import Footer from "../footer/Footer";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { Typesignin } from "../../App";
+import Testfooter from "../Testfooter";
 
 export default function SignIn() {
   const history = useHistory();
@@ -185,7 +186,7 @@ export default function SignIn() {
           </div>
         </form>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

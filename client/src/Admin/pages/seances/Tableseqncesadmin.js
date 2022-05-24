@@ -49,9 +49,7 @@ export default function Tableseqncesadmin() {
             <div className="header__item">
               <p className="filter__link filter__link--number">appartenant à</p>
             </div>
-            <div className="header__item">
-              <p className="filter__link filter__link--number">Description</p>
-            </div>
+
             <div className="header__item">
               <p className="filter__link filter__link--number">Action</p>
             </div>
@@ -65,7 +63,6 @@ export default function Tableseqncesadmin() {
                 <div className="table-data">{e.heureFin}</div>
                 <div className="table-data">{e.lienZoom}</div>
                 <div className="table-data">{e.enseignantId}</div>
-                <div className="table-data">{e.description}</div>
                 <div className="table-data">
                   <div
                     className="success"

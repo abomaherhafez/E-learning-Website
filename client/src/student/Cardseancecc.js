@@ -28,11 +28,40 @@ export default function Cardseancecc(props) {
   const history = useHistory();
   const div = "/ee";
   return (
-    <div className="cont-tarki77">
+
+
+    <article className="card">
+
+      <picture className="thumbnail">
+        <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/04/01170800/Free-Online-Courses-with-Certificates.jpg"
+        />
+      </picture>
+      <div className="card-content">
+        <h2> {element.title}</h2>
+        <p className='cardparagrphe'>{element.description}</p>
+      </div>
+      <button style={{
+        width: "50%"
+        , margin: "auto"
+      }}
+        className="buttoncard1"
+        onClick={() => {
+          localStorage.setItem("idseance", element._id);
+          history.push("./qq");
+        }}
+      >
+        pour plus d'infos
+      </button>
+    </article>
+
+  )
+}
+
+/*    <div className="cont-tarki77">
       <div className="bbb">
         <section>
           <img
-            src="https://static.scientificamerican.com/blogs/cache/file/15E43A6F-3941-471A-BF4A81AECDC8C8AA_source.jpg?w=590&h=800&19535223-FF51-4AE3-A05064AFC6E375F5"
+             src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/04/01170800/Free-Online-Courses-with-Certificates.jpg"
             className="imagee"
           />
           <h1 className="h1card1"> {element.title}</h1>
@@ -47,8 +76,6 @@ export default function Cardseancecc(props) {
           history.push("./qq");
         }}
       >
-        for more info
+        pour plus d'infos
       </button>
-    </div>
-  );
-}
+    </div>*/

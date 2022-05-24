@@ -3,11 +3,14 @@ import { useState } from "react";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
 import "./CreateSeance.css";
+import { useHistory } from "react-router-dom";
+import Testfooter from "../components/Testfooter";
 
 export default function CreateSeance() {
   const [visibility, setvisibility] = useState("hidden");
   const [visibilityy, setvisibilityy] = useState("hidden");
   const id = localStorage.getItem("id");
+  const history = useHistory();
 
   const [seance, setseance] = useState({
     title: "",
@@ -45,13 +48,17 @@ export default function CreateSeance() {
               console.log(content);
               if (content._message === "Seance validation failed") {
                 setvisibility("visible");
+                setvisibilityy("");
               } else {
                 setvisibilityy("visible");
+                setvisibility("");
+                localStorage.setItem("idseance", content._id);
+                history.push("/ee");
               }
             })();
           }}
         >
-          <h1>cree seance</h1>
+          <h1>créer séance</h1>
           <div className="content">
             <div className="input-field">
               <input
@@ -112,16 +119,6 @@ export default function CreateSeance() {
               />*/}
             </div>
             <div className="input-field">
-              <textarea
-                required
-                className="textareawidth"
-                placeholder="description"
-                onChange={(e) => {
-                  setseance({ ...seance, description: e.target.value });
-                }}
-              ></textarea>
-            </div>
-            <div className="input-field">
               <input
                 required
                 type="url"
@@ -131,6 +128,17 @@ export default function CreateSeance() {
                 }}
               />
             </div>
+            <div className="input-field">
+              <textarea
+                required
+                className="textareawidth"
+                placeholder="description"
+                onChange={(e) => {
+                  setseance({ ...seance, description: e.target.value });
+                }}
+              ></textarea>
+            </div>
+
           </div>
           {visibilityy === "visible" ? (
             <p style={{ textAlign: "center" }}>
@@ -151,7 +159,7 @@ export default function CreateSeance() {
           </div>
         </form>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

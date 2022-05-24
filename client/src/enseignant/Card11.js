@@ -11,7 +11,7 @@ export default function Card11(props) {
       <div className="bbb">
         <section>
           <img
-            src="https://static.scientificamerican.com/blogs/cache/file/15E43A6F-3941-471A-BF4A81AECDC8C8AA_source.jpg?w=590&h=800&19535223-FF51-4AE3-A05064AFC6E375F5"
+            src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/04/01170800/Free-Online-Courses-with-Certificates.jpg"
             className="imagee"
           />
           <h1 className="h1card1">{props.e.title}</h1>
@@ -26,7 +26,7 @@ export default function Card11(props) {
         }}
       >
         <Link className="linktolink" to={div}>
-          for more info
+          pour plus d'infos
         </Link>
       </button>
     </div>

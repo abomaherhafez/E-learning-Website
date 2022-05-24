@@ -2,6 +2,7 @@ import React from "react";
 import Cardseancestudentqfteraccept from "../components/cards/Cardseancestudentqfteraccept";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
+import Testfooter from "../components/Testfooter";
 
 export default function Seancesyudentafteraceept() {
   return (
@@ -9,7 +10,7 @@ export default function Seancesyudentafteraceept() {
       <NavBar />
       <Cardseancestudentqfteraccept />
       <div>
-        <Footer />
+        <Testfooter />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import Testfooter from "../components/Testfooter";
 
 export default function CreateaccountStudint() {
   const history = useHistory();
@@ -178,7 +179,7 @@ export default function CreateaccountStudint() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

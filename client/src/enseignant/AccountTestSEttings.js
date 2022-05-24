@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
 import "./acouttest.css";
 import { useHistory } from "react-router-dom";
+import Testfooter from "../components/Testfooter";
 export default function AccountTestSEttings() {
   const [profile, setprofile] = useState(false);
   const id = localStorage.getItem("id");
@@ -45,9 +46,12 @@ export default function AccountTestSEttings() {
           <div className="row gutters">
             <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
               <div className="cardtest h-100">
-                <div className="card-body">
+                <div className="card-body" style={{
+                  width: "150%",
+                  boxShadow: " 0 3px 10px rgb(0 0 0 / 20%)"
+                }}>
                   <div className="account-settings">
-                    <div className="user-profile">
+                    <div className="user-profile" >
                       <div className="user-avatar">
                         <img
                           src="https://bootdey.com/img/Content/avatar/avatar7.png"
@@ -287,7 +291,7 @@ export default function AccountTestSEttings() {
           </div>
         </div>
       )}
-      <Footer />
+      <Testfooter />
     </div>
   );
 }

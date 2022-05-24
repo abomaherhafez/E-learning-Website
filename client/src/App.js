@@ -29,6 +29,7 @@ import PageseanceEE from "./student/PageseanceEE";
 import Pageseanceqq from "./student/Pageseanceqq";
 import MonSéances from "./student/MonSéances";
 import Pageseancecc from "./student/Pageseancecc";
+import Testfooter from "./components/Testfooter";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -64,6 +65,9 @@ function App() {
                 </Route>
                 <Route path="/sign-in">
                   <SignIn />
+                </Route>
+                <Route path="/tesr">
+                  <Testfooter />
                 </Route>
                 <Route exact path="/contact">
                   <Contact />

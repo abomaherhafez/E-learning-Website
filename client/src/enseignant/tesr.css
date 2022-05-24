@@ -1,0 +1,80 @@
+.card-list {
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap             : 4em
+}
+
+.card,
+.card-body,
+.card-footer {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.card {
+    border-radius: 18px;
+    background   : #fff;
+    box-shadow   : 4px 4px 25px rgba(0, 0, 0, 0.4);
+    overflow     : hidden;
+    cursor       : pointer;
+    transition   : transform 0.4s;
+}
+
+.card:hover {
+    transform : scale(1.05);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    display  : block;
+    position : relative;
+    height   : 180px;
+    max-width: 100%;
+}
+
+.card-image img {
+    max-height     : 100%;
+    width          : 100%;
+    background-size: cover;
+}
+
+.card-body {
+    padding: 20px 28px;
+}
+
+.card-body .date {
+    font-weight: bolder;
+}
+
+.card-body h2 {
+    padding: 15px;
+    font-size: 1.8em;
+    margin: 2px auto 12px;
+}
+
+.card-body p {
+    color      : gray;
+    font-size  : 1.1em;
+    line-height: 22px;
+    text-align : center;
+}
+
+.card-footer {
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-footer .infoinfoinfoinfo {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);}
+
