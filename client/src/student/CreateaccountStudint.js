@@ -170,8 +170,7 @@ export default function CreateaccountStudint() {
                       type="button"
                       onClick={handle}
                     >
-                      Save Profile
-                    </button>
+                      Enregistrer le profil                    </button>
                   </div>
                 </div>
               </div>

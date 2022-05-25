@@ -73,7 +73,7 @@ export default function TableEtudiantaccepter() {
                         (async () => {
                           const rawResponse = await fetch(
                             "http://localhost:3500/acceptationAssisterSeance/" +
-                              e._id,
+                            e._id,
                             {
                               method: "put",
                               headers: {
@@ -89,24 +89,23 @@ export default function TableEtudiantaccepter() {
                           console.log(content);
                           console.log(e.sId);
                         })();
-                        /* (async () => {
-                            const rawResponse = await fetch(
-                              "http://localhost:3500/getEtudiantAssisterEnAttente/" +
-                                idd,
-                              {
-                                method: "get",
-                                headers: {
-                                  Accept: "application/json",
-                                  "Content-Type": "application/json",
-                                },
-                                body: JSON.stringify(),
-                              }
-                            );
-  
-                            const content = await rawResponse.json();
-                            setid(content);
-                            console.log(content);
-                          })();*/
+                        (async () => {
+                          const rawResponse = await fetch(
+                            "http://localhost:3500/getEtudiantAssisterAccepter/" + idd,
+                            {
+                              method: "get",
+                              headers: {
+                                Accept: "application/json",
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify(),
+                            }
+                          );
+
+                          const content = await rawResponse.json();
+                          setid(content);
+                          console.log(content);
+                        })();
                       }}
                     >
                       supprimer

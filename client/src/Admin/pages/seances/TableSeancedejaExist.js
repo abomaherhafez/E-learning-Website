@@ -21,7 +21,6 @@ export default function TableSeancedejaExist() {
   });
   const [affiche, setaffiche] = useState();
   const [number, setnumber] = useState([]);
-  const style = { marginLeft: "15px" };
 
   return (
     <div>
@@ -66,23 +65,31 @@ export default function TableSeancedejaExist() {
                   <div
                     className="info"
                     onClick={() => {
-                      setaffiche(e);
+                      if (affiche == undefined) {
+                        setaffiche(e);
+                      }
+                      else {
+                        setaffiche(undefined)
+                      }
                     }}
                   >
                     Afficher la séance
                   </div>
                 </div>
               </div>
+
             </div>
+
           ))}
         </div>
+
       </div>
       {affiche != undefined ? (
         <div
           style={{
             width: "50%",
             height: "20%",
-            marginLeft: "180px",
+            margin: "auto"
           }}
         >
           <SeqnceqfichheCard affiche={affiche} />

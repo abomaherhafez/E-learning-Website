@@ -77,3 +77,102 @@
   margin-top: 15px;
   color: #fff;
 }
+@import 'https://fonts.googleapis.com/css?family=Raleway|Sansita+One';
+ 
+ .cardhkgs {
+	 margin-top: 25px;
+	 align-items: center;
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+	 justify-content: center;
+	 margin-bottom: 50px;
+}
+ .cardhkg {
+	 position: relative;
+	 border-radius: 1em;
+	 width:30%;
+	 height: 290px;
+	 background-color: #FFF;
+	 -webkit-box-shadow: 0 2px 5px #777;
+	 -moz-box-shadow: 0 2px 5px #777;
+	 box-shadow: 0 2px 5px #777;
+	 overflow: hidden;
+	 margin: 10px 10px;
+	 -webkit-transition: all .2s ease-in-out;
+	 -moz-transition: all .2s ease-in-out;
+	 transition: all .2s ease-in-out;
+}
+ .cardhkg .cardhkg-header {
+	 position: absolute;
+	 align-items: center;
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+	 justify-content: center;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 45%;
+}
+ .cardhkg .cardhkg-header .cardhkg-image {
+	 height: 55%;
+}
+ .cardhkg .cardhkg-header.bg1 {
+	 background-color: #00A388;
+}
+ .cardhkg .cardhkg-header.bg2 {
+	 background-color: #F89B3C;
+}
+ .cardhkg .cardhkg-header.bg3 {
+	 background-color: #1EAAC2;
+}
+ .cardhkg .cardhkg-content {
+	 position: absolute;
+	 top: 45%;
+	 left: 0;
+	 width: 100%;
+	 height: 55%;
+	 padding: 0 3%;
+}
+ .cardhkg .cardhkg-content .cardhkg-title {
+	 margin: 10px 0;
+	 font-family: 'Raleway', sans-serif;
+	 text-transform: uppercase;
+	 font-size: 1.3em;
+}
+ .cardhkg .cardhkg-content .cardhkg-text {
+	 position: absolute;
+	 top: 50%;
+	 -webkit-transform: translate(0,-50%);
+	 -moz-transform: translate(0,-50%);
+	 transform: translate(0,-50%);
+	 color: #AAA;
+	 font-family: 'Sansita One', sans-serif;
+	 font-size: 1.1em;
+}
+ .cardhkg .cardhkg-content .cardhkg-more {
+	 position: absolute;
+	 right: 10%;
+	 bottom: 5%;
+	 text-decoration: none;
+	 font-family: 'Raleway', sans-serif;
+	 font-size: .9em;
+	 color: #1EAAC2;
+	 font-weight: bold;
+}
+ .cardhkg .cardhkg-content .cardhkg-more:hover {
+	 color: #8ED4E0;
+}
+ .cardhkg:hover {
+	 -webkit-box-shadow: 0 5px 6px #777;
+	 -moz-box-shadow: 0 5px 6px #777;
+	 box-shadow: 0 5px 6px #777;
+	 -webkit-transform: translate(0,-2%);
+	 -moz-transform: translate(0,-2%);
+	 transform: translate(0,-2%);
+}
+ .pforcontactus{
+   color: white;
+   font-size: 20px;
+ }

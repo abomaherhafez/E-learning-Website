@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import SeqnceqfichheCard from "../../Cards/SeqnceqfichheCard";
 import "./tableseanczes.css";
 
 export default function Tableseqncesadmin() {
@@ -20,8 +21,8 @@ export default function Tableseqncesadmin() {
     })();
   }, []);
   const [id, setid] = useState([]);
+  const [affiche, setaffiche] = useState();
 
-  const style = { marginLeft: "15px" };
 
   return (
     <div>
@@ -120,6 +121,7 @@ export default function Tableseqncesadmin() {
                     style={{
                       width: "100%",
                       marginTop: "3px",
+                      marginBottom: "3px"
                       /*border: "1px  dashed  #e30000",
                       borderRadius: "5px",
                      
@@ -174,12 +176,41 @@ export default function Tableseqncesadmin() {
                   >
                     Refus
                   </div>
+                  <div
+                    className="info"
+                    onClick={() => {
+                      if (affiche == undefined) {
+                        setaffiche(e);
+                      }
+                      else {
+                        setaffiche(undefined)
+                      }
+                    }}
+                  >
+                    Afficher la séance
+                  </div>
+
                 </div>
+
               </div>
+
             </div>
           ))}
         </div>
       </div>
+      {affiche != undefined ? (
+        <div
+          style={{
+            width: "50%",
+            height: "20%",
+            margin: "auto"
+          }}
+        >
+          <SeqnceqfichheCard affiche={affiche} />
+        </div>
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 }

@@ -71,7 +71,7 @@ export default function TAbleensingntEtudiant() {
                         (async () => {
                           const rawResponse = await fetch(
                             "http://localhost:3500/acceptationAssisterSeance/" +
-                              e._id,
+                            e._id,
                             {
                               method: "put",
                               headers: {
@@ -86,10 +86,10 @@ export default function TAbleensingntEtudiant() {
 
                           console.log(content);
                         })();
-                        /*(async () => {
+
+                        (async () => {
                           const rawResponse = await fetch(
-                            "http://localhost:3500/getEtudiantAssisterEnAttente/" +
-                              idd,
+                            "http://localhost:3500/getEtudiantAssisterEnAttente/" + idd,
                             {
                               method: "get",
                               headers: {
@@ -103,7 +103,7 @@ export default function TAbleensingntEtudiant() {
                           const content = await rawResponse.json();
                           setid(content);
                           console.log(content);
-                        })();*/
+                        })();
                       }}
                     >
                       Acceptation
@@ -123,7 +123,7 @@ export default function TAbleensingntEtudiant() {
                         (async () => {
                           const rawResponse = await fetch(
                             "http://localhost:3500/acceptationAssisterSeance/" +
-                              e._id,
+                            e._id,
                             {
                               method: "put",
                               headers: {
@@ -139,10 +139,9 @@ export default function TAbleensingntEtudiant() {
                           console.log(content);
                           console.log(e.sId);
                         })();
-                        /* (async () => {
+                        (async () => {
                           const rawResponse = await fetch(
-                            "http://localhost:3500/getEtudiantAssisterEnAttente/" +
-                              idd,
+                            "http://localhost:3500/getEtudiantAssisterEnAttente/" + idd,
                             {
                               method: "get",
                               headers: {
@@ -156,7 +155,7 @@ export default function TAbleensingntEtudiant() {
                           const content = await rawResponse.json();
                           setid(content);
                           console.log(content);
-                        })();*/
+                        })();
                       }}
                     >
                       Refus

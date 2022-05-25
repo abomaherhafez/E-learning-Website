@@ -12,9 +12,6 @@ export default function Home() {
       <div>
         <Header />
       </div>
-      <div className="home-div-h2">
-        <h2 className="classh2"> Nos séances cette mois</h2>
-      </div>
 
       <div>
         <Test />

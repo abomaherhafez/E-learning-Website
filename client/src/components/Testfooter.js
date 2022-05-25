@@ -34,12 +34,17 @@ export default function Testfooter() {
                 marginRight: "3px",
                 marginLeft: "3px",
               }}
-              onClick={() => { history.push('/') }}
+              onClick={() => {
+                history.push("/");
+              }}
             >
-              Home
+              Accueil
             </a>{" "}
             |
-            <a onClick={() => { history.push('/about') }}
+            <a
+              onClick={() => {
+                history.push("/about");
+              }}
               style={{
                 textDecoration: "none",
                 color: "white",
@@ -48,11 +53,13 @@ export default function Testfooter() {
               }}
               className="ahoverdecrition"
             >
-              About
+              qui sommes-nous
             </a>
             |
             <a
-              onClick={() => { history.push('/contact') }}
+              onClick={() => {
+                history.push("/contact");
+              }}
               style={{
                 textDecoration: "none",
                 color: "white",
@@ -61,7 +68,7 @@ export default function Testfooter() {
               }}
               className="ahoverdecrition"
             >
-              Contact
+              contactez-nous
             </a>
           </p>
 
@@ -138,19 +145,36 @@ export default function Testfooter() {
               si tu veux :
             </p>
             <p className="menu">
-              <span style={{ fontSize: "20px" }} onClick={() => { history.push("/Create-account-Enseignant") }} >
+              <span
+                style={{ fontSize: "20px" }}
+                onClick={() => {
+                  history.push("/Create-account-Enseignant");
+                }}
+              >
                 {" "}
                 enseignant crée un compte{" "}
               </span>
             </p>
             <p className="menu">
-              <span style={{ fontSize: "20px" }} onClick={() => { history.push("/Create-account") }}>
-
+              <span
+                style={{ fontSize: "20px" }}
+                onClick={() => {
+                  history.push("/Create-account");
+                }}
+              >
                 étudiant créer un compte{" "}
               </span>
             </p>
             <p className="menu">
-              <span style={{ fontSize: "20px" }} onClick={() => { history.push("/sign-in") }} >  se connecter </span>
+              <span
+                style={{ fontSize: "20px" }}
+                onClick={() => {
+                  history.push("/sign-in");
+                }}
+              >
+                {" "}
+                se connecter{" "}
+              </span>
             </p>
           </div>
         </div>

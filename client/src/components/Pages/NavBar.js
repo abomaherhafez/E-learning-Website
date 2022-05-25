@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { AiOutlineMenu } from "react-icons/ai";
+import img from "../logo.png"
 
 function NavBar() {
   useEffect(() => {
@@ -19,6 +20,8 @@ function NavBar() {
           <nav className="navbar">
             <div className="nav-container">
               <NavLink to="/" className="nav-logo">
+                {/* <img src={img} />*/}
+
                 E-learning
               </NavLink>
 
@@ -33,7 +36,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Home
+                          Accueil
                         </NavLink>
                       </li>
 
@@ -74,7 +77,7 @@ function NavBar() {
                             className="nav-links"
                             onClick={handleClick}
                           >
-                            Home
+                            Accueil
                           </NavLink>
                         </li>
 
@@ -125,7 +128,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Home
+                          Accueil
                         </NavLink>
                       </li>{" "}
                       <li className="nav-item">
@@ -135,8 +138,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          About
-                        </NavLink>
+                          qui sommes-nous                        </NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink
@@ -190,7 +192,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Contact Us
+                          contactez-nous
                         </NavLink>
                       </li>
                       <li className="nav-item">

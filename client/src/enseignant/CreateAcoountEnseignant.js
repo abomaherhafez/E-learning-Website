@@ -160,10 +160,13 @@ export default function CreateAcoountEnseignant() {
                             });
                           }}
                         >
-                          <option value="grapefruit">Grapefruit</option>
-                          <option value="lime">Lime</option>
-                          <option value="coconut">Coconut</option>
-                          <option value="mango">Mango</option>
+                          <option value="mathématiques ">mathématiques </option>
+                          <option value="Physique">Physique</option>
+                          <option value="informatique">informatique</option>
+                          <option value="sciences">sciences</option>
+                          <option value="Langue">Langue</option>
+                          <option value="chimie">chimie</option>
+
                         </select>
                       </div>
                     </div>
