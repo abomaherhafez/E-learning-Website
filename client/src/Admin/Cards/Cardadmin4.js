@@ -54,9 +54,29 @@ export default function Cardadmin4() {
       console.log(content);
     })();
   }, []);
+  useEffect(() => {
+    (async () => {
+      const rawResponse = await fetch(
+        "http://localhost:3500/getallassisterseance",
+        {
+          method: "get",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(),
+        }
+      );
+
+      const content = await rawResponse.json();
+      setassister(content);
+      console.log(content);
+    })();
+  }, []);
   const [number, setnumber] = useState([]);
   const [numberr, setnumberr] = useState([]);
   const [id, setid] = useState([]);
+  const [assister, setassister] = useState([]);
 
   return (
     <>
@@ -87,7 +107,7 @@ export default function Cardadmin4() {
       <div className="cont-tarki77 bigone bigoneeee ">
         <section>
           <h2 className="h2cardadmin">Nombre d'inscriptions aux séances</h2>
-          <p className="informationdata"> 5</p>
+          <p className="informationdata"> {assister.length}</p>
         </section>
       </div>
     </>

@@ -145,7 +145,7 @@ export default function SignIn() {
             console.log(signininformation);
           }}
         >
-          <h1 style={{ textAlign: "center" }}>Login</h1>
+          <h1 style={{ textAlign: "center" }}>Connexion</h1>
           <div className="content">
             <div className="input-field">
               <input
@@ -169,7 +169,7 @@ export default function SignIn() {
               type="submit"
               onClick={handle}
             >
-              Sign in
+              se connecter
             </button>
           </div>
           <div className="action">

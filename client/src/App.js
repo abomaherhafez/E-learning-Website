@@ -30,6 +30,7 @@ import Pageseanceqq from "./student/Pageseanceqq";
 import MonSéances from "./student/MonSéances";
 import Pageseancecc from "./student/Pageseancecc";
 import Testfooter from "./components/Testfooter";
+import Seancesdéjèaccepté from "./Admin/pages/seances/Seancesdéjèaccepté";
 
 export const singnin = createContext({});
 export const Typesignin = createContext({});
@@ -151,6 +152,9 @@ function App() {
                         </Route>
                         <Route path="/seances">
                           <Seances />
+                        </Route>
+                        <Route path="/seancesDejaaccpe">
+                          <Seancesdéjèaccepté />
                         </Route>
                         <Route path="/enseignant">
                           <Pageenseignant />

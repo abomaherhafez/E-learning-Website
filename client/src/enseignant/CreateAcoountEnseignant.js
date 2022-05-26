@@ -90,125 +90,141 @@ export default function CreateAcoountEnseignant() {
               </div>
               <div className="col-md-5 border-right">
                 <div className="p-3 py-5">
-                  <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h4 className="text-right">Profile Settings</h4>
-                  </div>
-                  <div className="rowHfidh mt-2">
-                    <div className="col-md-6">
-                      <label className="labels">Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="first name"
-                        onChange={(e) =>
-                          setName({ ...name, firstname: e.target.value })
-                        }
-                      />
+                  <form
+                    onSubmit={(event) => {
+                      event.preventDefault();
+
+                      handle();
+                    }}
+                  >
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                      <h4 className="text-right">créer un profil</h4>
                     </div>
-                    <div className="col-md-6">
-                      <label className="labels">last name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="lastname"
-                        onChange={(e) =>
-                          setName({ ...name, lastname: e.target.value })
-                        }
-                      />
+                    <div className="rowHfidh mt-2">
+                      <div className="col-md-6">
+                        <label className="labels">Prénom</label>
+                        <input
+                          required
+                          type="text"
+                          className="form-control"
+                          placeholder="entrer votre Prénom "
+                          onChange={(e) =>
+                            setName({ ...name, firstname: e.target.value })
+                          }
+                        />
+                      </div>
+                      <div className="col-md-6">
+                        <label className="labels">Nom</label>
+                        <input
+                          required
+                          type="text"
+                          className="form-control"
+                          placeholder="entrer votre Nom"
+                          onChange={(e) =>
+                            setName({ ...name, lastname: e.target.value })
+                          }
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3">
-                    <div className="col-md-12">
-                      <label className="labels">Email </label>
-                      <input
-                        type="Email"
-                        className="form-control"
-                        placeholder="enter email "
-                        onChange={(e) =>
-                          setName({ ...name, email: e.target.value })
-                        }
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <label className="labels">password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        placeholder="enter your password"
-                        onChange={(e) =>
-                          setName({ ...name, password: e.target.value })
-                        }
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <label className="labels">spécialité</label>
-                      {/* <input
+                    <div className="mt-3">
+                      <div className="col-md-12">
+                        <label className="labels">Email </label>
+                        <input
+                          required
+                          type="Email"
+                          className="form-control"
+                          placeholder="entrer votre Email"
+                          onChange={(e) =>
+                            setName({ ...name, email: e.target.value })
+                          }
+                        />
+                      </div>
+                      <div className="col-md-12">
+                        <label className="labels">Mot de passe</label>
+                        <input
+                          required
+                          type="password"
+                          className="form-control"
+                          placeholder="entrer votre Mot de passe"
+                          onChange={(e) =>
+                            setName({ ...name, password: e.target.value })
+                          }
+                        />
+                      </div>
+                      <div className="col-md-12">
+                        <label className="labels">spécialité</label>
+                        {/* <input required
                         type="text"
                         className="form-control"
                         placeholder="enter votre spécialité "
                         onChange={(e) =>
                           setName({ ...name, spécialité: e.target.value })
                         }
-                      />*/}
-                      <div>
-                        <select
-                          onChange={(e) => {
-                            console.log(name.spécialité);
-                            setName({
-                              ...name,
-                              spécialité: e.target.value,
-                            });
-                          }}
-                        >
-                          <option value="mathématiques ">mathématiques </option>
-                          <option value="Physique">Physique</option>
-                          <option value="informatique">informatique</option>
-                          <option value="sciences">sciences</option>
-                          <option value="Langue">Langue</option>
-                          <option value="chimie">chimie</option>
+                       />*/}
+                        <div>
+                          <select
+                            required
+                            onChange={(e) => {
+                              console.log(name.spécialité);
+                              setName({
+                                ...name,
+                                spécialité: e.target.value,
+                              });
+                            }}
+                          >
+                            <option value="mathématiques ">
+                              mathématiques{" "}
+                            </option>
+                            <option value="Physique">Physique</option>
+                            <option value="informatique">informatique</option>
+                            <option value="sciences">sciences</option>
+                            <option value="Langue">Langue</option>
+                            <option value="chimie">chimie</option>
+                          </select>
+                        </div>
+                      </div>
 
-                        </select>
+                      <div className="col-md-12">
+                        <label className="labels">Date de naissance</label>
+                        <input
+                          required
+                          type="Date"
+                          className="form-control"
+                          placeholder="entrer votre Date de naissance"
+                          onChange={(e) =>
+                            setName({ ...name, DateOfBirth: e.target.value })
+                          }
+                        />
+                      </div>
+                      <div className="col-md-12">
+                        <label className="labels">Numéro de télèphone</label>
+                        <input
+                          required
+                          type="text"
+                          className="form-control"
+                          placeholder="entrer votre Numéro de télèphone "
+                          onChange={(e) =>
+                            setName({ ...name, phone: e.target.value })
+                          }
+                        />
                       </div>
                     </div>
-
-                    <div className="col-md-12">
-                      <label className="labels">Date of Birth</label>
-                      <input
-                        type="Date"
-                        className="form-control"
-                        onChange={(e) =>
-                          setName({ ...name, DateOfBirth: e.target.value })
-                        }
-                      />
+                    {val == true ? (
+                      <p style={{ textAlign: "center" }}>
+                        Vérifiez les champs à remplir
+                      </p>
+                    ) : (
+                      <></>
+                    )}
+                    <div className="mt-5 text-center">
+                      <button
+                        className="btn btn-primary profile-button"
+                        type="submit"
+                      >
+                        Enregistrer le profil
+                      </button>
                     </div>
-                    <div className="col-md-12">
-                      <label className="labels">Mobile Number</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="enter phone number"
-                        onChange={(e) =>
-                          setName({ ...name, phone: e.target.value })
-                        }
-                      />
-                    </div>
-                  </div>
-                  {val == true ? (
-                    <p style={{ textAlign: "center" }}>
-                      Vérifiez les champs à remplir
-                    </p>
-                  ) : (
-                    <></>
-                  )}
-                  <div className="mt-5 text-center">
-                    <button
-                      className="btn btn-primary profile-button"
-                      type="button"
-                      onClick={handle}
-                    >
-                      Enregistrer le profil
-                    </button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

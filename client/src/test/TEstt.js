@@ -90,11 +90,30 @@ const TEstt = () => {
       setet(content);
     })();
   }, []);
+  useEffect(() => {
+    (async () => {
+      const rawResponse = await fetch(
+        "http://localhost:3500/getallassisterseance",
+        {
+          method: "get",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(),
+        }
+      );
+
+      const content = await rawResponse.json();
+      setasssister(content);
+    })();
+  }, []);
   const [et, setet] = useState("");
   const [ens, setens] = useState("");
   const [number, setnumber] = useState([]);
   const [numberr, setnumberr] = useState([]);
   const [id, setid] = useState([]);
+  const [asssister, setasssister] = useState([]);
   // Sample data
   const data = [
     { argument: "enseignants", value: ens.length },
@@ -102,7 +121,7 @@ const TEstt = () => {
     { argument: "seance Accepter", value: number.seances?.length },
     { argument: "seance non Accepter", value: numberr.seances?.length },
     { argument: "seance En Attente", value: id.length },
-    { argument: "inscriptions aux séances", value: 10 },
+    { argument: "inscriptions aux séances", value: asssister.length },
   ];
   return (
     <div>

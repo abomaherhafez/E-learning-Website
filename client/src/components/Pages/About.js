@@ -11,7 +11,7 @@ export default function About() {
       <NavBar />
       <div className="body">
         <h1>
-          qui sommes-nous
+          Qui sommes-nous
           <br></br>
           <img
             src="https://image.ibb.co/nk616F/Layer_1_copy_21.png"

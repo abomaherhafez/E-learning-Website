@@ -65,3 +65,10 @@ exports.statuAssisterSeance = (req, res) => {
       .catch((err) => res.json(err));
   }
 };
+exports.getallassisterseance = (req, res) => {
+  //give sId return stu accept
+  assisterSeance
+    .find()
+    .then((seance) => res.status(201).json(seance))
+    .catch((error) => res.status(400).json({ error }));
+};

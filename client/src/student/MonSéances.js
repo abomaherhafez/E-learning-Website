@@ -56,16 +56,6 @@ export default function MonSéances() {
     <div>
       <NavBar />
       <div className="one h11">
-        <h1 className="h11"> seance en attente </h1>
-      </div>
-      <div className="contentccccccccccccccccc">
-        <main className="main-area">
-          <section className="cards">
-            {seanceenattene.map((element) => (
-              <Cardseance key={element._id} element={element} />
-            ))}
-          </section></main></div>
-      <div className="one h11">
         <h1 className="h11">votre seance</h1>
       </div>
       <div className="contentccccccccccccccccc">
@@ -74,7 +64,22 @@ export default function MonSéances() {
             {seancesaaccept.map((element) => (
               <Cardseancecc key={element._id} element={element} />
             ))}
-          </section></main></div>
+          </section>
+        </main>
+      </div>
+      <div className="one h11">
+        <h1 className="h11"> seance en attente </h1>
+      </div>
+      <div className="contentccccccccccccccccc">
+        <main className="main-area">
+          <section className="cards">
+            {seanceenattene.map((element) => (
+              <Cardseance key={element._id} element={element} />
+            ))}
+          </section>
+        </main>
+      </div>
+
       <Testfooter />
     </div>
   );

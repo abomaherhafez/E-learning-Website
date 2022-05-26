@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { AiOutlineMenu } from "react-icons/ai";
-import img from "../logo.png"
+import img from "../logo.png";
 
 function NavBar() {
   useEffect(() => {
@@ -21,7 +21,6 @@ function NavBar() {
             <div className="nav-container">
               <NavLink to="/" className="nav-logo">
                 {/* <img src={img} />*/}
-
                 E-learning
               </NavLink>
 
@@ -31,12 +30,22 @@ function NavBar() {
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                       <li className="nav-item">
                         <NavLink
-                          to="/Home"
+                          to="/HomeaccountStudent"
                           activeClassName="active"
                           className="nav-links"
                           onClick={handleClick}
                         >
                           Accueil
+                        </NavLink>
+                      </li>
+                      <li className="nav-item">
+                        <NavLink
+                          to="/mon-séances"
+                          activeClassName="active"
+                          className="nav-links"
+                          onClick={handleClick}
+                        >
+                          Mes Séances
                         </NavLink>
                       </li>
 
@@ -59,9 +68,10 @@ function NavBar() {
                           onClick={handleClick}
                           onMouseUp={() => {
                             localStorage.setItem("type-inscription", "hhhh");
+                            localStorage.setItem("id", "");
                           }}
                         >
-                          log out
+                          Déconnexion
                         </NavLink>
                       </li>
                     </ul>
@@ -110,9 +120,10 @@ function NavBar() {
                             onClick={handleClick}
                             onMouseUp={() => {
                               localStorage.setItem("type-inscription", "hhhh");
+                              localStorage.setItem("id", "");
                             }}
                           >
-                            log out
+                            Déconnexion
                           </NavLink>
                         </li>
                       </ul>
@@ -138,7 +149,8 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          qui sommes-nous                        </NavLink>
+                          Qui sommes-nous
+                        </NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink
@@ -147,7 +159,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Contact Us
+                          Contactez-nous
                         </NavLink>
                       </li>
                       <li className="nav-item">
@@ -157,7 +169,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Sign-in
+                          Connexion
                         </NavLink>
                       </li>
                     </ul>
@@ -172,7 +184,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Home
+                          Accueil
                         </NavLink>
                       </li>{" "}
                       <li className="nav-item">
@@ -192,7 +204,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          contactez-nous
+                          Contactez-nous
                         </NavLink>
                       </li>
                       <li className="nav-item">
@@ -202,7 +214,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          Sign-in
+                          Connexion
                         </NavLink>
                       </li>
                     </ul>

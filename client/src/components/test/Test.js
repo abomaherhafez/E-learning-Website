@@ -16,7 +16,7 @@ export default function () {
             <div className="col-sm-5 col-xs-12 text-right">
               <div className="paragraph">
                 Si vous êtes un étudiant, vous devez créer un compte et vous
-                connecter, ce qui vous permet de voir toutes les séances qui ont
+                Connexion, ce qui vous permet de voir toutes les séances qui ont
                 été approuvées par l'administration, et vous avez le droit de
                 demander à rejoindre cette séance.
               </div>
@@ -73,7 +73,7 @@ export default function () {
             <div className="col-sm-5 col-xs-12 text-right">
               <div className="paragraph">
                 Si vous êtes enseignant, vous devez créer un compte et vous
-                connecter, ce qui vous permet de créer des séances et la demande
+                Connexion, ce qui vous permet de créer des séances et la demande
                 d'acceptation est automatiquement envoyée à l'admin, Lorsque la
                 demande d'acceptation est approuvée par l'administrateur,
               </div>

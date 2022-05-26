@@ -51,7 +51,7 @@ export default function Cardseance2() {
       </div>
       <div className="divbutt">
         <button onClick={handleclick} className="butt">
-          <span className="text">update</span>
+          <span className="text">Mise à jour</span>
         </button>
       </div>
     </div>

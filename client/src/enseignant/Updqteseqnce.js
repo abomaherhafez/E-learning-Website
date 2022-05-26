@@ -133,7 +133,7 @@ export default function Updqteseqnce() {
         }}
       >
         <button onClick={handleclick} className="butt">
-          <span className="text">update</span>
+          <span className="text">Mise à jour</span>
         </button>
       </div>
       <Testfooter />

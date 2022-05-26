@@ -14,5 +14,5 @@ router.get("/api/logoutEtudiant", etudiantCntrl.logout);
 router.get("/etudiant/:id", etudiantCntrl.getEtudiant);
 router.delete("/etudiantDEl/:id", etudiantCntrl.deleteEtudiant);
 router.get("/etudiant", etudiantCntrl.getAllEtudiant);
-router.patch("/modifierEtudiant/:id", etudiantCntrl.modifierEtudiant);
+router.post("/modifierEtudiant/:id", etudiantCntrl.modifierEtudiant);
 module.exports = router;

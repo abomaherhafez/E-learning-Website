@@ -36,6 +36,12 @@ export default function Sidebarvol() {
           </Link>
         </li>
         <li className="has-subnav">
+          <Link className="iconsidebar" to="/seancesDejaaccpe">
+            <SchoolIcon className="fa  fa-2x marginRightForText" />
+            <span className="nav-text">séances déjà accepté</span>
+          </Link>
+        </li>
+        <li className="has-subnav">
           <Link className="iconsidebar" to="/enseignant">
             <SchoolIcon className="fa  fa-2x marginRightForText" />
             <span className="nav-text">enseignant</span>
@@ -56,7 +62,7 @@ export default function Sidebarvol() {
         >
           <Link to="/sign-in">
             <i className="fa fa-power-off fa-2x"></i>
-            <span className="nav-text">Logout</span>
+            <span className="nav-text">déconexion</span>
           </Link>
         </li>
       </ul>

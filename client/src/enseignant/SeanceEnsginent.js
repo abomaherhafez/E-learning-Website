@@ -44,10 +44,12 @@ export default function SeanceEnsginent() {
               <div className="card-content">
                 <h2 style={{ textAlign: "center" }}> {affiche.title}</h2>
 
-                <div style={{
-                  display: "flex"
-                  , justifyContent: "space-between"
-                }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
                   {" "}
                   <p style={{ fontSize: "120%" }}>
                     heure de Debut: {affiche.heureDebut}
@@ -72,7 +74,7 @@ export default function SeanceEnsginent() {
                   history.push("/update seance");
                 }}
               >
-                Update
+                Mise à jour
               </button>
               <button
                 className="dangerrr"

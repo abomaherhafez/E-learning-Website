@@ -24,4 +24,5 @@ router.put(
   "/acceptationAssisterSeance/:id",
   assisterSeanceCtrl.statuAssisterSeance
 );
+router.get("/getallassisterseance", assisterSeanceCtrl.getallassisterseance);
 module.exports = router;

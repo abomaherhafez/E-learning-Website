@@ -46,12 +46,15 @@ export default function AccountTestSEttings() {
           <div className="row gutters">
             <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
               <div className="cardtest h-100">
-                <div className="card-body" style={{
-                  width: "150%",
-                  boxShadow: " 0 3px 10px rgb(0 0 0 / 20%)"
-                }}>
+                <div
+                  className="card-body"
+                  style={{
+                    width: "150%",
+                    boxShadow: " 0 3px 10px rgb(0 0 0 / 20%)",
+                  }}
+                >
                   <div className="account-settings">
-                    <div className="user-profile" >
+                    <div className="user-profile">
                       <div className="user-avatar">
                         <img
                           src="https://bootdey.com/img/Content/avatar/avatar7.png"
@@ -84,7 +87,7 @@ export default function AccountTestSEttings() {
                             setprofile(true);
                           }}
                         >
-                          Update
+                          Mise à jour{" "}
                         </button>
                         <button
                           className="dangerrr"
@@ -159,7 +162,9 @@ export default function AccountTestSEttings() {
                 <div className="card-body">
                   <div className="row gutters">
                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                      <h6 className="mb-2 text-primary">Personal Details</h6>
+                      <h6 className="mb-2 " style={{ fontSize: "26px" }}>
+                        à propos de moi
+                      </h6>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                       <div className="form-group">
@@ -281,7 +286,7 @@ export default function AccountTestSEttings() {
                           })();
                         }}
                       >
-                        Update
+                        Mise à jour
                       </button>
                     </div>
                   </div>

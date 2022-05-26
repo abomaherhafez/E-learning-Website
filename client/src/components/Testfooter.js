@@ -53,7 +53,7 @@ export default function Testfooter() {
               }}
               className="ahoverdecrition"
             >
-              qui sommes-nous
+              Qui sommes-nous
             </a>
             |
             <a
@@ -68,7 +68,7 @@ export default function Testfooter() {
               }}
               className="ahoverdecrition"
             >
-              contactez-nous
+              Contactez-nous
             </a>
           </p>
 
@@ -173,7 +173,7 @@ export default function Testfooter() {
                 }}
               >
                 {" "}
-                se connecter{" "}
+                se Connexion{" "}
               </span>
             </p>
           </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
 import Testfooter from "../components/Testfooter";
 import "./CreateSeance.css";
@@ -59,7 +58,7 @@ export default function CreateSeance() {
               <input
                 required
                 type="text"
-                placeholder="title"
+                placeholder="Titre"
                 onChange={(e) => {
                   setseance({ ...seance, title: e.target.value });
                 }}

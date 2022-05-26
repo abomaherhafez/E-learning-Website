@@ -15,28 +15,23 @@ export default function Contact() {
           </div>
           <div className="cardhkg-content">
             <h2 className="cardhkg-title">LOCATION</h2>
-            <p className="cardhkg-text">
-
-              Nom et numéro de la rue ,Ville, Pays
-            </p>
+            <p className="cardhkg-text">Nom et numéro de la rue ,Ville, Pays</p>
           </div>
         </div>
 
         <div className="cardhkg">
           <div className="cardhkg-header bg2">
-            <p className="pforcontactus">contactez-nous par mail</p>
+            <p className="pforcontactus">Contactez-nous par mail</p>
           </div>
           <div className="cardhkg-content">
             <h2 className="cardhkg-title">Adresse mail</h2>
-            <p className="cardhkg-text">
-              E-learning@elearning.com
-            </p>
+            <p className="cardhkg-text">E-learning@elearning.com</p>
           </div>
         </div>
 
         <div className="cardhkg">
           <div className="cardhkg-header bg3">
-            <p className="pforcontactus">contactez-nous par téléphone</p>
+            <p className="pforcontactus">Contactez-nous par téléphone</p>
           </div>
           <div className="cardhkg-content">
             <h2 className="cardhkg-title">le numéro de téléphone</h2>

@@ -70,7 +70,7 @@ export default function CardUpdateProfileEnseingnant2() {
       </div>
       <div className="divbutt">
         <button className="butt" onClick={handleclick}>
-          <span className="text">update</span>
+          <span className="text">Mise à jour</span>
         </button>
       </div>
     </div>
