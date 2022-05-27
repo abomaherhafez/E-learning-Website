@@ -82,31 +82,34 @@ export default function Cardadmin4() {
     <>
       <div className="cont-tarki77 bigone  ">
         <section>
-          <h2 className="h2cardadmin"> le nompre de seance Accepter</h2>
+          <h2 className="h2cardadmin"> Séance accepter</h2>
           <p className="informationdata">{number.seances?.length}</p>
         </section>
       </div>
       <div
         className="cont-tarki77 bigone"
-        style={{ backgroundColor: "#ff0018" }}
+        style={{ backgroundColor: "#EF6154" }}
       >
         <section>
-          <h2 className="h2cardadmin"> le nompre de seance non Accepter</h2>
+          <h2 className="h2cardadmin"> Séance non accepter</h2>
           <p className="informationdata">{numberr.seances?.length}</p>
         </section>
       </div>
       <div
         className="cont-tarki77 bigone bigoneeee "
-        style={{ backgroundColor: "cd28dd" }}
+        style={{ backgroundColor: "#F7B34C" }}
       >
         <section>
-          <h2 className="h2cardadmin"> le nompre de seance En Attente</h2>
+          <h2 className="h2cardadmin"> Séance En attente</h2>
           <p className="informationdata"> {id.length}</p>
         </section>
       </div>
-      <div className="cont-tarki77 bigone bigoneeee ">
+      <div
+        style={{ background: "#AEB5C1" }}
+        className="cont-tarki77 bigone bigoneeee "
+      >
         <section>
-          <h2 className="h2cardadmin">Nombre d'inscriptions aux séances</h2>
+          <h2 className="h2cardadmin">Inscriptions </h2>
           <p className="informationdata"> {assister.length}</p>
         </section>
       </div>

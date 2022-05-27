@@ -30,7 +30,6 @@ export default function EtudiantinTableCallApiInMap(props) {
       <div className="table-data">{etudiant.email}</div>
       <div className="table-data">{etudiant.niveau}</div>
       <div className="table-data">{etudiant.phone}</div>
-      <div className="table-data"></div>
     </>
   );
 }

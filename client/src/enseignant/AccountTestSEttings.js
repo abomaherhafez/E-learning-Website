@@ -259,7 +259,7 @@ export default function AccountTestSEttings() {
                   <div className="row gutters">
                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                       <button
-                        style={{ margin: "20px", marginLeft: "30%" }}
+                        style={{ margin: "20px", width: "100%" }}
                         type="button"
                         id="submit"
                         name="submit"

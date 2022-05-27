@@ -10,12 +10,14 @@
   margin-left: 200px;
 }
 .cardqdmindqsh {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-left: 40px;
+  display: inherit;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    padding-right: 30px;
+    padding-left: 83px;
 }
 .cont-tarki77.bigone {
   flex: 20%;

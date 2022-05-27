@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SeqnceqfichheCard from "../../Cards/SeqnceqfichheCard";
+import Appartenant from "./Appartenant";
 import "./tableseanczes.css";
 
 export default function Tableseqncesadmin() {
@@ -22,7 +23,6 @@ export default function Tableseqncesadmin() {
   }, []);
   const [id, setid] = useState([]);
   const [affiche, setaffiche] = useState();
-
 
   return (
     <div>
@@ -63,7 +63,7 @@ export default function Tableseqncesadmin() {
                 <div className="table-data">{e.heureDebut}</div>
                 <div className="table-data">{e.heureFin}</div>
                 <div className="table-data">{e.lienZoom}</div>
-                <div className="table-data">{e.enseignantId}</div>
+                <Appartenant e={e} />
                 <div className="table-data">
                   <div
                     className="success"
@@ -121,7 +121,7 @@ export default function Tableseqncesadmin() {
                     style={{
                       width: "100%",
                       marginTop: "3px",
-                      marginBottom: "3px"
+                      marginBottom: "3px",
                       /*border: "1px  dashed  #e30000",
                       borderRadius: "5px",
                      
@@ -181,19 +181,15 @@ export default function Tableseqncesadmin() {
                     onClick={() => {
                       if (affiche == undefined) {
                         setaffiche(e);
-                      }
-                      else {
-                        setaffiche(undefined)
+                      } else {
+                        setaffiche(undefined);
                       }
                     }}
                   >
                     Afficher la séance
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           ))}
         </div>
@@ -203,7 +199,7 @@ export default function Tableseqncesadmin() {
           style={{
             width: "50%",
             height: "20%",
-            margin: "auto"
+            margin: "auto",
           }}
         >
           <SeqnceqfichheCard affiche={affiche} />

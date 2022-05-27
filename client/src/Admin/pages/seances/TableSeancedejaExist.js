@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SeqnceqfichheCard from "../../Cards/SeqnceqfichheCard";
+import Appartenant from "./Appartenant";
 import "./tableseanczes.css";
 export default function TableSeancedejaExist() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function TableSeancedejaExist() {
       setnumber(content.seances);
       console.log(content);
     })();
-  });
+  }, []);
   const [affiche, setaffiche] = useState();
   const [number, setnumber] = useState([]);
 
@@ -60,16 +61,15 @@ export default function TableSeancedejaExist() {
                 <div className="table-data">{e.heureDebut}</div>
                 <div className="table-data">{e.heureFin}</div>
                 <div className="table-data">{e.lienZoom}</div>
-                <div className="table-data">{e.enseignantId}</div>
+                <Appartenant e={e} />
                 <div className="table-data">
                   <div
                     className="info"
                     onClick={() => {
                       if (affiche == undefined) {
                         setaffiche(e);
-                      }
-                      else {
-                        setaffiche(undefined)
+                      } else {
+                        setaffiche(undefined);
                       }
                     }}
                   >
@@ -77,19 +77,16 @@ export default function TableSeancedejaExist() {
                   </div>
                 </div>
               </div>
-
             </div>
-
           ))}
         </div>
-
       </div>
       {affiche != undefined ? (
         <div
           style={{
             width: "50%",
             height: "20%",
-            margin: "auto"
+            margin: "auto",
           }}
         >
           <SeqnceqfichheCard affiche={affiche} />

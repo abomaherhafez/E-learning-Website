@@ -173,7 +173,7 @@ export default function Testfooter() {
                 }}
               >
                 {" "}
-                se Connexion{" "}
+                se connecter{" "}
               </span>
             </p>
           </div>

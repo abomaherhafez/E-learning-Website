@@ -1,5 +1,11 @@
 import React from "react";
 import "./test.css";
+import img1 from "../images/inscriptionE for website.png";
+import img2 from "../images/listeSeanceEtud.png";
+import img3 from "../images/Etudiaintaccepterinseance.png";
+import img4 from "../images/inscriptionEnseignant.png";
+import img5 from "../images/accepterEtud.png";
+import img6 from "../images/listeseanceEnse.png";
 
 export default function () {
   return (
@@ -23,20 +29,21 @@ export default function () {
             </div>
             <div className="col-sm-2 col-xs-12 first"></div>
             <div className="col-sm-5 col-xs-12">
-              <img
-                data-forceload="1"
-                width="371"
-                src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso1.png"
-              />
+              <img data-forceload="1" width="371" src={img1} />
             </div>
           </div>
           <div className="row max-width separator">
             <div className="col-sm-5 col-xs-12">
               <img
+                style={{
+                  height: "250px",
+                  marginTop: "10px",
+                  marginBottom: "10px",
+                }}
                 data-forceload="1"
                 className="align-image"
                 width="371"
-                src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso2.png"
+                src={img2}
               />
             </div>
             <div className="col-sm-2 col-xs-12 first"></div>
@@ -61,11 +68,7 @@ export default function () {
                 <div className="circle gradient">3</div>
               </div>
               <div className="col-sm-5 col-xs-12">
-                <img
-                  data-forceload="1"
-                  width="371"
-                  src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso3.png"
-                />
+                <img data-forceload="1" width="371" src={img3} />
               </div>
             </div>
           </div>
@@ -83,7 +86,8 @@ export default function () {
               <img
                 data-forceload="1"
                 width="371"
-                src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso1.png"
+                style={{ marginTop: "10xp" }}
+                src={img4}
               />
             </div>
           </div>
@@ -93,7 +97,8 @@ export default function () {
                 data-forceload="1"
                 className="align-image"
                 width="371"
-                src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso2.png"
+                style={{ marginBottom: "10px" }}
+                src={img5}
               />
             </div>
             <div className="col-sm-2 col-xs-12 first"></div>
@@ -123,7 +128,8 @@ export default function () {
                 <img
                   data-forceload="1"
                   width="371"
-                  src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/comofunciona_paso3.png"
+                  style={{ marginBottom: "5px" }}
+                  src={img6}
                 />
               </div>
             </div>

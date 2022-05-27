@@ -33,27 +33,33 @@ export default function Pageseancecc() {
           <div className="cardddddddddddddddddddd">
             <h2>{affiche.title}</h2>
             <p>{affiche.description}</p>
-            <p style={{
-              textAlign: "center", color: "white", fontSize: "20px"
-            }}>Date de séance:{affiche.date}</p>
-            <div style={{
-              display: "flex",
-              justifyContent: "space-between"
-            }}>
-              <p style={{ color: "white", fontSize: "20px" }}> Heure de Debut: {affiche.heureDebut}</p>
-              <p style={{ color: "white", fontSize: "20px" }}>Heure de Fin:{affiche.heureFin}</p>
-
+            <p
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontSize: "20px",
+              }}
+            >
+              Date de séance:{affiche.date}
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "white", fontSize: "20px" }}>
+                {" "}
+                Heure de Debut: {affiche.heureDebut}
+              </p>
+              <p style={{ color: "white", fontSize: "20px" }}>
+                Heure de Fin:{affiche.heureFin}
+              </p>
             </div>
             <h4
               style={{
-                marginBottom: "3px",
                 alignItems: "center",
-                backgroundImage:
-                  "linear-gradient(144deg, #50ff40, #429ef3 50%, #85eb00)",
-
-                boxShadow: "rgb(117 0 252 / 20%) 0 15px 30px -5px",
-                boxSizing: "border-box",
-                color: "#ffffff",
+                color: "rgb(245, 185, 33)",
                 display: "flex",
 
                 justifyContent: "center",
@@ -61,17 +67,17 @@ export default function Pageseancecc() {
             >
               La demande de participation a été envoyée
             </h4>
-
           </div>
         </div>
-
       </section>
 
-      <div><Testfooter /> </div>
+      <div>
+        <Testfooter />{" "}
+      </div>
     </div>
   );
 }
-  /*
+/*
 <div>
 <NavBar />
 <div>

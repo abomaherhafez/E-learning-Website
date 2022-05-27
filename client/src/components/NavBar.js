@@ -194,7 +194,7 @@ function NavBar() {
                           className="nav-links"
                           onClick={handleClick}
                         >
-                          About
+                          Qui sommes-nous
                         </NavLink>
                       </li>
                       <li className="nav-item">

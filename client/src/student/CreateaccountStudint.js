@@ -2,8 +2,6 @@ import React from "react";
 import "./CreateaccountStudint.css";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/footer/Footer";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Testfooter from "../components/Testfooter";
 
@@ -68,8 +66,8 @@ export default function CreateaccountStudint() {
                   />
                   {/*                  src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
                    */}
-                  <span className="font-weight-bold">Edogaru</span>
-                  <span className="text-black-50">edogaru@mail.com.my</span>
+                  <span className="font-weight-bold">John wick</span>
+                  <span className="text-black-50">johnwick@mail.com</span>
                   <span> </span>
                 </div>
               </div>

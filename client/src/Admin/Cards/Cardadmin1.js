@@ -23,7 +23,7 @@ export default function Cardadmin1(props) {
   return (
     <div className="cont-tarki77 bigone">
       <section>
-        <h2 className="h2cardadmin">Le nombre d'enseignants</h2>
+        <h2 className="h2cardadmin">Enseignants</h2>
         <p className="informationdata"> {number.length}</p>
       </section>
     </div>
